@@ -23,9 +23,9 @@ namespace Test1
       using (var ctx = new ProjectsDbContext())
       {
         var boss = ctx.Employees.First(x => x.Slaves.Count > 0);
-        int res = ctx.Database.ExecuteSqlCommand("UPDATE dbo.Employees " +
+        int res = ctx.Database.ExecuteSqlCommand("UPDATE dbo.Employees " + 
                                                  "SET Version = @p0, Name = @p1 " +
-                                                 "WHERE Version = @p2", boss.Version + 1, "NewBoss5", boss.Version+5);
+                                                 "WHERE Version = @p2", boss.Version + 1, "NewBoss6", boss.Version+5);
         Console.WriteLine(res);
 
         foreach (var employee in ctx.Employees)
