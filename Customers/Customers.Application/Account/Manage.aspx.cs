@@ -17,7 +17,7 @@ namespace Customers.Application.Account
       if (!IsPostBack)
       {
         // Determine the sections to render
-        bool hasLocalPassword = OpenAuth.HasLocalPassword(User.Identity.Name);
+        const bool hasLocalPassword = true;
         setPassword.Visible = !hasLocalPassword;
         changePassword.Visible = hasLocalPassword;
 
@@ -58,9 +58,10 @@ namespace Customers.Application.Account
 
     public IEnumerable<OpenAuthAccountData> GetExternalLogins()
     {
-      List<OpenAuthAccountData> accounts = OpenAuth.GetAccountsForUser(User.Identity.Name).ToList();
-      CanRemoveExternalLogins = CanRemoveExternalLogins || accounts.Count() > 1;
-      return accounts;
+//      List<OpenAuthAccountData> accounts = OpenAuth.GetAccountsForUser(User.Identity.Name).ToList();
+//      CanRemoveExternalLogins = CanRemoveExternalLogins || accounts.Count() > 1;
+//      return accounts;
+      return Enumerable.Empty<OpenAuthAccountData>();
     }
 
     public void RemoveExternalLogin(string providerName, string providerUserId)

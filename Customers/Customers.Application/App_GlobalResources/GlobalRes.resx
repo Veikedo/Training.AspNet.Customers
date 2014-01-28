@@ -168,4 +168,16 @@
   <data name="Password" xml:space="preserve">
     <value>Пароль</value>
   </data>
+  <data name="OrderDescriprtion" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>Менеджер</value>
+  </data>
+  <data name="ManagerInfoButton" xml:space="preserve">
+    <value>Поглядеть</value>
+  </data>
+  <data name="ManagerInfo" xml:space="preserve">
+    <value>Информация</value>
+  </data>
 </root>

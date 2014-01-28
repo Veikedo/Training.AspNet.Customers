@@ -353,6 +353,8 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="DataSources\CustomersDataSource.cs" />
+    <Compile Include="DataSources\DataSourceBase.cs" />
+    <Compile Include="DataSources\OrdersDataSource.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
