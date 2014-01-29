@@ -124,6 +124,15 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Заказчик.
+        /// </summary>
+        public static string Customer {
+            get {
+                return ResourceManager.GetString("Customer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Редактировать.
         /// </summary>
         public static string Edit {

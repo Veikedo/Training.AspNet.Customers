@@ -192,4 +192,7 @@
   <data name="Update" xml:space="preserve">
     <value>Обновить</value>
   </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Заказчик</value>
+  </data>
 </root>

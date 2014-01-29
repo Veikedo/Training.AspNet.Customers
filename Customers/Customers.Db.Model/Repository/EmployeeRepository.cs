@@ -5,12 +5,12 @@ namespace Customers.Db.Repository
 {
   public partial class EntityRepository
   {
-    public IQueryable<Employee> Employees
+    public IQueryable<User> Users
     {
       get { return Db.Employees; }
     }
 
-    public bool CreateEmployee(Employee instance)
+    public bool CreateUser(User instance)
     {
       if (instance.Id == 0)
       {
@@ -22,9 +22,9 @@ namespace Customers.Db.Repository
       return false;
     }
 
-    public bool UpdateEmployee(Employee instance)
+    public bool UpdateUser(User instance)
     {
-      int res = Db.Database.ExecuteSqlCommand("UPDATE Employees " +
+      int res = Db.Database.ExecuteSqlCommand("UPDATE Users " +
                                               "SET Name=@p0, ManagerId=@p1, Version=@p2 " +
                                               "WHERE Id=@p3 AND Version=@p4",
                                               instance.Name, instance.ManagerId,
@@ -32,9 +32,9 @@ namespace Customers.Db.Repository
       return res > 0;
     }
 
-    public bool RemoveEmployee(int idEmployee)
+    public bool RemoveUser(int idEmployee)
     {
-      Employee instance = Db.Employees.FirstOrDefault(p => p.Id == idEmployee);
+      User instance = Db.Employees.FirstOrDefault(p => p.Id == idEmployee);
 
       if (instance != null)
       {

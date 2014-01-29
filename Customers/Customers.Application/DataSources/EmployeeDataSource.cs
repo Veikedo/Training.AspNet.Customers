@@ -7,14 +7,14 @@ namespace Customers.Application.DataSources
   [UsedImplicitly]
   public class EmployeeDataSource : BaseDataSource
   {
-    public void UpdateEmployee(Employee employee)
+    public void UpdateEmployee(User user)
     {
-      Repository.UpdateEmployee(employee);
+      Repository.UpdateUser(user);
     }
 
-    public Employee GetEmployee(int id)
+    public User GetEmployee(int id)
     {
-      return Repository.Employees.FirstOrDefault(x => x.Id == id);
+      return Repository.Users.FirstOrDefault(x => x.Id == id);
     } 
   }
 }

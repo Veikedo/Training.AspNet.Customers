@@ -5,6 +5,14 @@
     <h1><%: Title %>.</h1>
   </hgroup>
 
+
+
+
+  <asp:CheckBox ID="IsCustomer" runat="server" />
+
+
+
+
   <asp:CreateUserWizard runat="server" ID="RegisterUser" ViewStateMode="Disabled" OnCreatedUser="RegisterUser_CreatedUser">
     <LayoutTemplate>
       <asp:PlaceHolder runat="server" ID="wizardStepPlaceholder" />
@@ -28,31 +36,28 @@
             <ol>
               <li>
                 <asp:Label runat="server" AssociatedControlID="UserName">
-                      <asp:Literal runat="server" Text="<%$Resources:GlobalRes, UserName%>" />
-                </asp:Label>
-                <asp:TextBox runat="server" ID="UserName" />
+                  <asp:Literal runat="server" Text="<%$Resources:GlobalRes, UserName%>" />
+                </asp:Label><asp:TextBox runat="server" ID="UserName" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="UserName"
                                             CssClass="field-validation-error" ErrorMessage="<% $Resources:GlobalRes, UserNameRequired %>" />
               </li>
               <li>
-                <asp:Label runat="server" AssociatedControlID="Email">Email</asp:Label>
-                <asp:TextBox runat="server" ID="Email" TextMode="Email" />
+                <asp:Label runat="server" AssociatedControlID="Email">Email</asp:Label><asp:TextBox runat="server" ID="Email" TextMode="Email" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
                                             CssClass="field-validation-error" ErrorMessage="<% $Resources:GlobalRes, EmailNameRequired %>" />
               </li>
               <li>
                 <asp:Label runat="server" AssociatedControlID="Password">
-                              <asp:Literal runat="server" Text="<%$Resources:GlobalRes, Password%>" />
-                </asp:Label>
-                <asp:TextBox runat="server" ID="Password" TextMode="Password" />
+                  <asp:Literal runat="server" Text="<%$Resources:GlobalRes, Password%>" />
+                </asp:Label><asp:TextBox runat="server" ID="Password" TextMode="Password" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="Password"
                                             CssClass="field-validation-error" ErrorMessage="<% $Resources:GlobalRes, PasswordRequired %>" />
               </li>
               <li>
                 <asp:Label runat="server" AssociatedControlID="ConfirmPassword">
-                              <asp:Literal runat="server" Text="<%$Resources:GlobalRes, ConfirmPassword%>" />
-                </asp:Label>
-                <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" />
+                  <asp:Literal runat="server" Text="<%$Resources:GlobalRes, ConfirmPassword%>" />
+                </asp:Label><asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" />
+                <br />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="ConfirmPassword"
                                             CssClass="field-validation-error" Display="Dynamic" ErrorMessage="<% $Resources:GlobalRes, ConfirmPasswordRequired %>" />
                 <asp:CompareValidator runat="server" ControlToCompare="Password" ControlToValidate="ConfirmPassword"

@@ -14,11 +14,11 @@ namespace Customers.Test1
 /*
       using (var ctx = new ProjectsDbContext())
       {
-        var boss = new Employee {Name = "Boss"};
-        var employee = new Employee {Name = "Slave"};
+        var boss = new Users {Name = "Boss"};
+        var employee = new Users {Name = "Slave"};
 
         boss.Slaves.Add(employee);
-        ctx.Employees.Add(boss);
+        ctx.Users.Add(boss);
         ctx.SaveChanges();
       }
 
@@ -26,10 +26,10 @@ namespace Customers.Test1
 
       using (var ctx = new ProjectsDbContext())
       {
-        Employee boss = ctx.Employees.First(x => x.Slaves.Count > 0);
+        Users boss = ctx.Users.First(x => x.Slaves.Count > 0);
 
         boss.Slaves.Clear();
-        boss.Slaves = new Collection<Employee> {new Employee {Name = "Slave2"}};
+        boss.Slaves = new Collection<Users> {new Users {Name = "Slave2"}};
         ctx.Entry(boss).State = EntityState.Modified;
 
         ctx.SaveChanges();
@@ -49,17 +49,17 @@ namespace Customers.Test1
     {
       using (var ctx = new ProjectsDbContext())
       {
-        foreach (Employee boss in ctx.Employees.Where(x => x.Slaves.Count > 0))
+        foreach (Users boss in ctx.Users.Where(x => x.Slaves.Count > 0))
         {
           Console.WriteLine("Boss name:" + boss.Name);
-          foreach (Employee slave in boss.Slaves)
+          foreach (Users slave in boss.Slaves)
           {
             Console.WriteLine(slave.Name);
           }
         }
 
         Console.WriteLine("All");
-        foreach (Employee employee in ctx.Employees)
+        foreach (Users employee in ctx.Users)
         {
           Console.WriteLine(employee.Name);
         }

@@ -56,20 +56,20 @@ namespace Customers.Application.Providers
         return null;
       }
 
-      if (_repository.Employees.Any(x => x.Name == username))
+      if (_repository.Users.Any(x => x.Name == username))
       {
         status = MembershipCreateStatus.DuplicateUserName;
         return null;
       }
 
-      var user = new Employee
+      var user = new User
       {
         Name = username,
         Email = email,
         Password = GetPasswordHash(password),
       };
 
-      _repository.CreateEmployee(user);
+      _repository.CreateUser(user);
 
       status = MembershipCreateStatus.Success;
       return GetUser(username, false);
@@ -94,12 +94,12 @@ namespace Customers.Application.Providers
 
     public override bool ChangePassword(string username, string oldPassword, string newPassword)
     {
-      Employee employee = _repository.Employees.FirstOrDefault(x => x.Name == username);
+      User user = _repository.Users.FirstOrDefault(x => x.Name == username);
 
-      if (employee != null && employee.Password == GetPasswordHash(oldPassword))
+      if (user != null && user.Password == GetPasswordHash(oldPassword))
       {
-        employee.Password = GetPasswordHash(newPassword);
-        _repository.UpdateEmployee(employee);
+        user.Password = GetPasswordHash(newPassword);
+        _repository.UpdateUser(user);
 
         return true;
       }
@@ -119,7 +119,7 @@ namespace Customers.Application.Providers
 
     public override bool ValidateUser(string username, string password)
     {
-      var user = _repository.Employees.FirstOrDefault(x => x.Name == username);
+      var user = _repository.Users.FirstOrDefault(x => x.Name == username);
       return user != null && user.Password == GetPasswordHash(password);
     }
 
@@ -135,11 +135,11 @@ namespace Customers.Application.Providers
 
     public override MembershipUser GetUser(string username, bool userIsOnline)
     {
-      Employee employee = _repository.Employees.FirstOrDefault(x => x.Name == username);
+      User user = _repository.Users.FirstOrDefault(x => x.Name == username);
 
-      if (employee != null)
+      if (user != null)
       {
-        var member = new MembershipUser(ProviderName, employee.Name, employee.Id, employee.Email,
+        var member = new MembershipUser(ProviderName, user.Name, user.Id, user.Email,
                                         string.Empty, string.Empty, true, false, DateTime.Now,
                                         DateTime.Now, DateTime.Now, DateTime.Now, DateTime.Now);
 
@@ -151,11 +151,11 @@ namespace Customers.Application.Providers
 
     public override string GetUserNameByEmail(string email)
     {
-      Employee employee = _repository.Employees
+      User user = _repository.Users
                                  .FirstOrDefault(
                                    x => String.Compare(x.Email, email, StringComparison.OrdinalIgnoreCase) == 0);
 
-      return employee != null ? employee.Email : string.Empty;
+      return user != null ? user.Email : string.Empty;
     }
 
     public override bool DeleteUser(string username, bool deleteAllRelatedData)

@@ -7,7 +7,7 @@
   <asp:ObjectDataSource ID="CustomersDataSource" runat="server" SelectMethod="GetCustomers" TypeName="Customers.Application.DataSources.CustomersDataSource" />
   <div>
     <div style="float: left; width: 50%;" >
-      <asp:GridView ID="CustomersGridView" runat="server" AutoGenerateColumns="False" DataSourceID="CustomersDataSource" DataKeyNames="Id" >
+      <asp:GridView ID="CustomersGridView" runat="server" AutoGenerateColumns="False" DataSourceID="CustomersDataSource" DataKeyNames="UserId" >
         <Columns>
           <asp:CommandField ShowSelectButton="True" />
           <asp:BoundField DataField="CompanyName" HeaderText="<% $Resources:GlobalRes, Company %>" SortExpression="CompanyName" ItemStyle-Width="40%" />
@@ -22,7 +22,7 @@
     <div style="float: right; width: 50%;" >
       <asp:ObjectDataSource ID="OrdersDataSource" runat="server" SelectMethod="GetCustomerOrders" TypeName="Customers.Application.DataSources.OrdersDataSource">
         <SelectParameters>
-          <asp:ControlParameter ControlID="CustomersGridView" DefaultValue="1" Name="customerId" PropertyName="SelectedDataKey.Values[&quot;Id&quot;]" Type="Int32" />
+          <asp:ControlParameter ControlID="CustomersGridView" DefaultValue="1" Name="customerId" PropertyName="SelectedDataKey.Values[&quot;UserId&quot;]" Type="Int32" />
         </SelectParameters>
       </asp:ObjectDataSource>
       <asp:GridView ID="OrdersGridView" runat="server" AutoGenerateColumns="False" DataSourceID="OrdersDataSource" DataKeyNames="ManagerId" OnRowCommand="OrdersGridView_OnRowCommand" >

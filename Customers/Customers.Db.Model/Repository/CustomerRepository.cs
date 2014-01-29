@@ -6,14 +6,14 @@ namespace Customers.Db.Repository
 {
   public partial class EntityRepository
   {
-    public IQueryable<Customer> Customers
+    public IQueryable<CustomerInfo> CustomersInfo
     {
       get { return Db.Customers; }
     }
 
-    public bool CreateCustomer(Customer instance)
+    public bool CreateCustomerInfo(CustomerInfo instance)
     {
-      if (instance.Id == 0)
+      if (instance.UserId == 0)
       {
         Db.Customers.Add(instance);
         Db.SaveChanges();
@@ -23,9 +23,9 @@ namespace Customers.Db.Repository
       return false;
     }
 
-    public bool UpdateCustomer(Customer instance)
+    public bool UpdateCustomerInfo(CustomerInfo instance)
     {
-      Customer cache = Db.Customers.FirstOrDefault(p => p.Id == instance.Id);
+      CustomerInfo cache = Db.Customers.FirstOrDefault(p => p.UserId == instance.UserId);
 
       if (cache != null)
       {
@@ -43,9 +43,9 @@ namespace Customers.Db.Repository
       return false;
     }
 
-    public bool RemoveCustomer(int idCustomer)
+    public bool RemoveCustomerInfo(int idCustomer)
     {
-      Customer instance = Db.Customers.FirstOrDefault(p => p.Id == idCustomer);
+      CustomerInfo instance = Db.Customers.FirstOrDefault(p => p.UserId == idCustomer);
 
       if (instance != null)
       {

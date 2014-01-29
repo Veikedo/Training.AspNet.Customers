@@ -41,7 +41,7 @@
   </div>
   <asp:ObjectDataSource ID="EmployeeDataSource" runat="server" SelectMethod="GetEmployee" UpdateMethod="UpdateEmployee"
                         TypeName="Customers.Application.DataSources.EmployeeDataSource" 
-                        DataObjectTypeName="Customers.Db.Models.Employee" >
+                        DataObjectTypeName="Customers.Db.Models.User" >
     <SelectParameters>
       <asp:QueryStringParameter DefaultValue="0" Name="id" QueryStringField="id" Type="Int32" />
     </SelectParameters>

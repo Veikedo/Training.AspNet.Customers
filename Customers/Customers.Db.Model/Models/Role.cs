@@ -7,14 +7,12 @@ namespace Customers.Db.Models
   {
     public Role()
     {
-      Employees = new Collection<Employee>();
-      Customers = new Collection<Customer>();
+      Users = new Collection<User>();
     }
 
     public int Id { get; set; }
-    
+
     public string Code { get; set; }
-    public virtual ICollection<Employee> Employees { get; set; }
-    public virtual ICollection<Customer> Customers { get; set; }
+    public virtual ICollection<User> Users { get; set; }
   }
 }

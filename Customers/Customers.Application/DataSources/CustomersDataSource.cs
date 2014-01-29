@@ -7,9 +7,9 @@ namespace Customers.Application.DataSources
   [UsedImplicitly]
   public class CustomersDataSource : BaseDataSource
   {
-    public IQueryable<Customer> GetCustomers()
+    public IQueryable<CustomerInfo> GetCustomers()
     {
-      return Repository.Customers;
+      return Repository.CustomersInfo;
     }
   }
 }

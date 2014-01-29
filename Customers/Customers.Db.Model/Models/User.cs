@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Customers.Db.Models
 {
-  public class Employee : VersionableModel
+  public class User : VersionableModel
   {
-    public Employee()
+    public User()
     {
-      Slaves = new Collection<Employee>();
+      Slaves = new Collection<User>();
       Orders = new Collection<Order>();
       Roles = new Collection<Role>();
       Version = 1;
@@ -21,13 +18,20 @@ namespace Customers.Db.Models
     public string Name { get; set; }
 
     public int? ManagerId { get; set; }
-    public virtual Employee Manager { get; set; }
+    public virtual User Manager { get; set; }
 
     public string Password { get; set; }
     public string Email { get; set; }
 
-    public virtual ICollection<Employee> Slaves { get; set; }
+    public virtual ICollection<User> Slaves { get; set; }
     public virtual ICollection<Order> Orders { get; set; }
     public virtual ICollection<Role> Roles { get; set; }
+
+    public virtual CustomerInfo CustomerInfo { get; set; }
+
+    public bool IsCustomer
+    {
+      get { return Roles.Any(x => x.Code == "Customer"); }
+    }
   }
 }
