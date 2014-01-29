@@ -21,6 +21,7 @@ namespace Customers.Application.Account
       {
         continueUrl = "~/";
       }
+      
       Response.Redirect(continueUrl);
     }
   }

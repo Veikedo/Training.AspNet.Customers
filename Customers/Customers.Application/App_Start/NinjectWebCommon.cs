@@ -55,10 +55,8 @@ namespace Customers.Application
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-          string connectionString = ConfigurationManager.ConnectionStrings["SqlCe"].ConnectionString;
-
-          kernel.Bind<ProjectsDbContext>().ToMethod(c => new ProjectsDbContext(connectionString));
-          kernel.Bind<IRepository>().To<EntityRepository>().InRequestScope();
+          kernel.Bind<ProjectsDbContext>().ToMethod(c => new ProjectsDbContext());
+          kernel.Bind<IRepository>().To<EntityRepository>();
         }        
     }
 }

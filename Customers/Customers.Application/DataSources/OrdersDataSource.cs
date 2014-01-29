@@ -5,7 +5,7 @@ using Customers.Db.Models;
 namespace Customers.Application.DataSources
 {
   [UsedImplicitly]
-  public class OrdersDataSource : DataSourceBase
+  public class OrdersDataSource : BaseDataSource
   {
     public IQueryable<Order> GetCustomerOrders(int customerId)
     {

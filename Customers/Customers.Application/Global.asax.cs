@@ -2,6 +2,12 @@
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Services.Description;
+using CommonServiceLocator.NinjectAdapter.Unofficial;
+using Customers.Db;
+using Customers.Db.Repository;
+using Microsoft.Practices.ServiceLocation;
+using Ninject;
 
 namespace Customers.Application
 {
@@ -13,6 +19,16 @@ namespace Customers.Application
       BundleConfig.RegisterBundles(BundleTable.Bundles);
       AuthConfig.RegisterOpenAuth();
       RouteConfig.RegisterRoutes(RouteTable.Routes);
+      RegisterDependencyResolver();
+    }
+
+    private void RegisterDependencyResolver()
+    {
+      var kernel = new StandardKernel();
+      kernel.Bind<ProjectsDbContext>().ToMethod(c => new ProjectsDbContext());
+      kernel.Bind<IRepository>().To<EntityRepository>();
+
+      ServiceLocator.SetLocatorProvider(() => new NinjectServiceLocator(kernel));
     }
 
     private void Application_End(object sender, EventArgs e)

@@ -1,5 +1,4 @@
-﻿using System.Data.Entity;
-using System.Linq;
+﻿using System.Linq;
 using Customers.Db.Models;
 
 namespace Customers.Db.Repository
@@ -25,25 +24,12 @@ namespace Customers.Db.Repository
 
     public bool UpdateEmployee(Employee instance)
     {
-      Employee cache = Db.Employees.FirstOrDefault(p => p.Id == instance.Id);
-
-      if (cache != null)
-      {
-        cache.ManagerId = instance.ManagerId;
-        cache.Name = instance.Name;
-
-        cache.Orders.Clear();
-        cache.Orders = instance.Orders;
-
-        cache.Slaves.Clear();
-        cache.Slaves = instance.Slaves;
-
-        Db.Entry(cache).State = EntityState.Modified;
-        Db.SaveChanges();
-        return true;
-      }
-
-      return false;
+      int res = Db.Database.ExecuteSqlCommand("UPDATE Employees " +
+                                              "SET Name=@p0, ManagerId=@p1, Version=@p2 " +
+                                              "WHERE Id=@p3 AND Version=@p4",
+                                              instance.Name, instance.ManagerId,
+                                              instance.Version + 1, instance.Id, instance.Version);
+      return res > 0;
     }
 
     public bool RemoveEmployee(int idEmployee)

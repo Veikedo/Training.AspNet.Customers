@@ -11,6 +11,7 @@ namespace Customers.Test1
   {
     private static void Main()
     {
+/*
       using (var ctx = new ProjectsDbContext())
       {
         var boss = new Employee {Name = "Boss"};
@@ -40,8 +41,10 @@ namespace Customers.Test1
 
       Console.WriteLine("Done");
       Console.ReadLine();
+*/
     }
 
+/*
     private static void Print()
     {
       using (var ctx = new ProjectsDbContext())
@@ -62,5 +65,6 @@ namespace Customers.Test1
         }
       }
     }
+*/
   }
 }

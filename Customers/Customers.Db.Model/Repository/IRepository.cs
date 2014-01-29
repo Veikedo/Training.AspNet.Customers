@@ -32,5 +32,14 @@ namespace Customers.Db.Repository
     bool RemoveOrder(int idOrder);
 
     #endregion
+
+    #region Role
+
+    IQueryable<Role> Roles { get; }
+    bool CreateRole(Role instance);
+    bool UpdateRole(Role instance);
+    bool RemoveRole(int idRole);
+
+    #endregion
   }
 }
