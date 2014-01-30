@@ -1,7 +1,3 @@
-D:\Projects\Web\Customers\Customers\Customers.Application\obj\Debug\Customers.Application.csprojResolveAssemblyReference.cache
-D:\Projects\Web\Customers\Customers\Customers.Application\obj\Debug\Customers.Application.App_GlobalResources.GlobalRes.resources
-D:\Projects\Web\Customers\Customers\Customers.Application\obj\Debug\Customers.Application.App_GlobalResources.GlobalRes.en.resources
-D:\Projects\Web\Customers\Customers\Customers.Application\obj\Debug\Customers.Application.csproj.GenerateResource.Cache
 D:\Projects\Web\Customers\Customers\Customers.Application\bin\NLog.config
 D:\Projects\Web\Customers\Customers\Customers.Application\bin\Customers.Application.dll.config
 D:\Projects\Web\Customers\Customers\Customers.Application\bin\Customers.Application.dll
@@ -76,6 +72,10 @@ D:\Projects\Web\Customers\Customers\Customers.Application\bin\DotNetOpenAuth.Ope
 D:\Projects\Web\Customers\Customers\Customers.Application\bin\DotNetOpenAuth.AspNet.xml
 D:\Projects\Web\Customers\Customers\Customers.Application\bin\Microsoft.AspNet.Membership.OpenAuth.xml
 D:\Projects\Web\Customers\Customers\Customers.Application\bin\Microsoft.AspNet.FriendlyUrls.xml
+D:\Projects\Web\Customers\Customers\Customers.Application\obj\Debug\Customers.Application.csprojResolveAssemblyReference.cache
+D:\Projects\Web\Customers\Customers\Customers.Application\obj\Debug\Customers.Application.App_GlobalResources.GlobalRes.resources
+D:\Projects\Web\Customers\Customers\Customers.Application\obj\Debug\Customers.Application.App_GlobalResources.GlobalRes.en.resources
+D:\Projects\Web\Customers\Customers\Customers.Application\obj\Debug\Customers.Application.csproj.GenerateResource.Cache
 D:\Projects\Web\Customers\Customers\Customers.Application\obj\Debug\en\Customers.Application.resources.dll
 D:\Projects\Web\Customers\Customers\Customers.Application\obj\Debug\Customers.Application.dll
 D:\Projects\Web\Customers\Customers\Customers.Application\obj\Debug\Customers.Application.pdb

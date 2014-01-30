@@ -6,7 +6,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
   <div>
     <div style="float: left; width: 50%;" >
-      <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataSourceID="EmployeeDataSource" Height="50px" Width="125px">
+      <asp:DetailsView ID="UserView" runat="server" AutoGenerateRows="False" DataSourceID="EmployeeDataSource" Height="50px" Width="125px" Visible="<%# IsOwner %>">
         <Fields>
           <asp:BoundField DataField="Name" HeaderText="<%$ Resources:GlobalRes, Name %>" SortExpression="Name" />
           <asp:BoundField DataField="Id" ReadOnly="True" ShowHeader="False">
@@ -19,8 +19,23 @@
             <ControlStyle CssClass="Hidden" />
             <ItemStyle CssClass="Hidden" />
           </asp:BoundField>
-          <asp:CommandField ShowEditButton="True" EditText="<% $Resources:GlobalRes,Edit %>" 
+          <asp:CommandField ShowEditButton="True" EditText="<% $Resources:GlobalRes,Edit %>"
                             UpdateText="<% $Resources:GlobalRes,Update %>"  CancelText="<% $Resources:GlobalRes,Cancel %>" />
+        </Fields>
+      </asp:DetailsView>
+      <asp:DetailsView ID="UserView1" runat="server" AutoGenerateRows="False" DataSourceID="EmployeeDataSource" Height="50px" Width="125px" Visible="<%# !IsOwner %>">
+        <Fields>
+          <asp:BoundField DataField="Name" HeaderText="<%$ Resources:GlobalRes, Name %>" SortExpression="Name" />
+          <asp:BoundField DataField="Id" ReadOnly="True" ShowHeader="False">
+            <HeaderStyle CssClass="Hidden" />
+            <ControlStyle CssClass="Hidden" />
+            <ItemStyle CssClass="Hidden" />
+          </asp:BoundField>
+          <asp:BoundField DataField="Version" ReadOnly="True" ShowHeader="False">
+            <HeaderStyle CssClass="Hidden" />
+            <ControlStyle CssClass="Hidden" />
+            <ItemStyle CssClass="Hidden" />
+          </asp:BoundField>
         </Fields>
       </asp:DetailsView>
     </div> 
@@ -33,7 +48,7 @@
       </asp:ObjectDataSource>
       <asp:GridView ID="Slaves" runat="server" AutoGenerateColumns="False" DataSourceID="SlavesDataSource">
         <Columns>
-          <asp:TemplateField HeaderText="<% $Resources:GlobalRes, Address %>">
+          <asp:TemplateField HeaderText="<% $Resources:GlobalRes, Slaves %>">
             <ItemTemplate>
               <%# Eval("User.Name") %>
             </ItemTemplate>

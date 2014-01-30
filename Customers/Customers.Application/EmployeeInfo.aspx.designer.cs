@@ -13,13 +13,22 @@ namespace Customers.Application {
     public partial class EmployeeInformation {
         
         /// <summary>
-        /// DetailsView1 control.
+        /// UserView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DetailsView DetailsView1;
+        protected global::System.Web.UI.WebControls.DetailsView UserView;
+        
+        /// <summary>
+        /// UserView1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DetailsView UserView1;
         
         /// <summary>
         /// SlavesDataSource control.

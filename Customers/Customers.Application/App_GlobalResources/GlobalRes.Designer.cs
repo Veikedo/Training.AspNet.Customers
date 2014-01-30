@@ -295,6 +295,15 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Подчиненные.
+        /// </summary>
+        public static string Slaves {
+            get {
+                return ResourceManager.GetString("Slaves", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Улица.
         /// </summary>
         public static string Street {

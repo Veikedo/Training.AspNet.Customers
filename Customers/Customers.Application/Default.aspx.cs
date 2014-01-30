@@ -13,7 +13,7 @@ namespace Customers.Application
 
     protected void OrdersGridView_OnRowCommand(object sender, GridViewCommandEventArgs e)
     {
-      if (e.CommandName == "GetManagerInfoCommand")
+      if (e.CommandName == "GetManagerInfoCommand") 
       {
         int index = Convert.ToInt32(e.CommandArgument);
         DataKey key = OrdersGridView.DataKeys[index];
@@ -21,7 +21,7 @@ namespace Customers.Application
 
         if (key != null && int.TryParse(key.Value.ToString(), out orderId))
         {
-          Response.Redirect("EmployeeInformation.aspx?id=" + orderId, true);
+          Response.Redirect("EmployeeInfo.aspx?id=" + orderId, true);
         }
         else
         {
