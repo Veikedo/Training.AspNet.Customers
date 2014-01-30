@@ -21,11 +21,11 @@ namespace Customers.Application
 
         if (key != null && int.TryParse(key.Value.ToString(), out orderId))
         {
-          Response.Redirect("EmployeeInfo.aspx?id=" + orderId, true);
+          Response.Redirect("EmployeeInformation.aspx?id=" + orderId, true);
         }
         else
         {
-          Logger.Warn("Access to EmployeeInfo using invalid orderId");
+          Logger.Warn("Access to EmployeeInformation using invalid orderId");
         }
       }
     }

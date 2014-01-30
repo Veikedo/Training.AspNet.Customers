@@ -195,4 +195,19 @@
   <data name="Customer" xml:space="preserve">
     <value>Заказчик</value>
   </data>
+  <data name="House" xml:space="preserve">
+    <value>Дом</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Улица</value>
+  </data>
+  <data name="CompanyNameRequired" xml:space="preserve">
+    <value>Введите название компании</value>
+  </data>
+  <data name="HouseRequired" xml:space="preserve">
+    <value>Введите номер дома</value>
+  </data>
+  <data name="StreetRequired" xml:space="preserve">
+    <value>Введите название улицы</value>
+  </data>
 </root>

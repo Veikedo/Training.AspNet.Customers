@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Информация о сотруднике" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EmployeeInfo.aspx.cs" Inherits="Customers.Application.EmployeeInfo" %>
+﻿<%@ Page Title="Информация о сотруднике" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="EmployeeInfo.aspx.cs" Inherits="Customers.Application.EmployeeInformation" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
@@ -31,9 +31,13 @@
           <asp:QueryStringParameter DefaultValue="0" Name="managerId" QueryStringField="id" Type="Int32" />
         </SelectParameters>
       </asp:ObjectDataSource>
-      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SlavesDataSource">
+      <asp:GridView ID="Slaves" runat="server" AutoGenerateColumns="False" DataSourceID="SlavesDataSource">
         <Columns>
-          <asp:BoundField DataField="Name" HeaderText="<% $Resources:GlobalRes, Name %>" SortExpression="Name" />
+          <asp:TemplateField HeaderText="<% $Resources:GlobalRes, Address %>">
+            <ItemTemplate>
+              <%# Eval("User.Name") %>
+            </ItemTemplate>
+          </asp:TemplateField>
         </Columns>
       </asp:GridView>
       

@@ -1,0 +1,10 @@
+D:\Projects\Web\Customers\Customers.Db.Model\bin\Debug\Customers.Db.Model.dll.config
+D:\Projects\Web\Customers\Customers.Db.Model\bin\Debug\Customers.Db.Model.dll
+D:\Projects\Web\Customers\Customers.Db.Model\bin\Debug\Customers.Db.Model.pdb
+D:\Projects\Web\Customers\Customers.Db.Model\bin\Debug\EntityFramework.dll
+D:\Projects\Web\Customers\Customers.Db.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\Web\Customers\Customers.Db.Model\bin\Debug\EntityFramework.xml
+D:\Projects\Web\Customers\Customers.Db.Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projects\Web\Customers\Customers.Db.Model\obj\Debug\Customers.Db.Model.csprojResolveAssemblyReference.cache
+D:\Projects\Web\Customers\Customers.Db.Model\obj\Debug\Customers.Db.Model.dll
+D:\Projects\Web\Customers\Customers.Db.Model\obj\Debug\Customers.Db.Model.pdb

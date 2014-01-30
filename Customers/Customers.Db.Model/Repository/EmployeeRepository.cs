@@ -1,18 +1,19 @@
-﻿using System.Linq;
+﻿using System.Data.Entity;
+using System.Linq;
 using Customers.Db.Models;
 
 namespace Customers.Db.Repository
 {
   public partial class EntityRepository
   {
-    public IQueryable<User> Users
+    public IQueryable<EmployeeInfo> Employees
     {
       get { return Db.Employees; }
     }
 
-    public bool CreateUser(User instance)
+    public bool CreateEmployee(EmployeeInfo instance)
     {
-      if (instance.Id == 0)
+      if (instance.UserId == 0)
       {
         Db.Employees.Add(instance);
         Db.SaveChanges();
@@ -22,19 +23,26 @@ namespace Customers.Db.Repository
       return false;
     }
 
-    public bool UpdateUser(User instance)
+    public bool UpdateEmployee(EmployeeInfo instance)
     {
-      int res = Db.Database.ExecuteSqlCommand("UPDATE Users " +
-                                              "SET Name=@p0, ManagerId=@p1, Version=@p2 " +
-                                              "WHERE Id=@p3 AND Version=@p4",
-                                              instance.Name, instance.ManagerId,
-                                              instance.Version + 1, instance.Id, instance.Version);
-      return res > 0;
+      EmployeeInfo cache = Db.Employees.FirstOrDefault(p => p.UserId == instance.UserId);
+
+      if (cache != null)
+      {
+        cache.ManagerId = instance.ManagerId;
+        cache.UserId = instance.UserId;
+
+        Db.Entry(cache).State = EntityState.Modified;
+        Db.SaveChanges();
+        return true;
+      }
+
+      return false;
     }
 
-    public bool RemoveUser(int idEmployee)
+    public bool RemoveEmployee(int idEmployee)
     {
-      User instance = Db.Employees.FirstOrDefault(p => p.Id == idEmployee);
+      EmployeeInfo instance = Db.Employees.FirstOrDefault(p => p.UserId == idEmployee);
 
       if (instance != null)
       {

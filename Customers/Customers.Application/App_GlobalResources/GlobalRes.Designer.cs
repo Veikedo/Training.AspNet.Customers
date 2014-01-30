@@ -97,6 +97,15 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Введите название компании.
+        /// </summary>
+        public static string CompanyNameRequired {
+            get {
+                return ResourceManager.GetString("CompanyNameRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Подтвердите пароль.
         /// </summary>
         public static string ConfirmPassword {
@@ -156,6 +165,24 @@ namespace Customers.Application.App_GlobalResources {
         public static string Hello {
             get {
                 return ResourceManager.GetString("Hello", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Дом.
+        /// </summary>
+        public static string House {
+            get {
+                return ResourceManager.GetString("House", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите номер дома.
+        /// </summary>
+        public static string HouseRequired {
+            get {
+                return ResourceManager.GetString("HouseRequired", resourceCulture);
             }
         }
         
@@ -264,6 +291,24 @@ namespace Customers.Application.App_GlobalResources {
         public static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Улица.
+        /// </summary>
+        public static string Street {
+            get {
+                return ResourceManager.GetString("Street", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите название улицы.
+        /// </summary>
+        public static string StreetRequired {
+            get {
+                return ResourceManager.GetString("StreetRequired", resourceCulture);
             }
         }
         

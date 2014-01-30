@@ -5,13 +5,12 @@ namespace Customers.Db.Repository
 {
   public interface IRepository
   {
-    #region CustomerInfo
+    #region Customer
 
-    IQueryable<CustomerInfo> CustomersInfo { get; }
-
-    bool CreateCustomerInfo(CustomerInfo instance);
-    bool UpdateCustomerInfo(CustomerInfo instance);
-    bool RemoveCustomerInfo(int idCustomer);
+    IQueryable<CustomerInfo> Customers { get; }
+    bool CreateCustomer(CustomerInfo instance);
+    bool UpdateCustomer(CustomerInfo instance);
+    bool RemoveCustomer(int idCustomer);
 
     #endregion
 
@@ -39,6 +38,15 @@ namespace Customers.Db.Repository
     bool CreateRole(Role instance);
     bool UpdateRole(Role instance);
     bool RemoveRole(int idRole);
+
+    #endregion
+
+    #region Employee
+
+    IQueryable<EmployeeInfo> Employees { get; }
+    bool CreateEmployee(EmployeeInfo instance);
+    bool UpdateEmployee(EmployeeInfo instance);
+    bool RemoveEmployee(int idRole);
 
     #endregion
   }

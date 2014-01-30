@@ -72,9 +72,21 @@ namespace Customers.Application.Providers
 
     public override void AddUsersToRoles(string[] usernames, string[] roleCodes)
     {
-      IQueryable<User> users = _repository.Users.Where(x => usernames.Any(y => y == x.Name));
-      IQueryable<Role> roles = _repository.Roles.Where(x => roleCodes.Any(y => y == x.Code));
+      var users = _repository.Users.Where(x => usernames.Any(y => y == x.Name)).ToList();
+      var roles = _repository.Roles.Where(x => roleCodes.Any(y => y == x.Code)).ToList();
 
+      foreach (Role t in roles)
+      {
+        Role role = t;
+        foreach (User user in users.Where(x => role.Users.All(y => y.Id != x.Id)))
+        {
+          role.Users.Add(user);
+        }
+
+        _repository.UpdateRole(role);
+      }
+
+/*
       foreach (User t in users)
       {
         User user = t;
@@ -85,6 +97,7 @@ namespace Customers.Application.Providers
 
         _repository.UpdateUser(user);
       }
+*/
     }
 
     public override void RemoveUsersFromRoles(string[] usernames, string[] roleNames)

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Web.Security;
-using System.Web.UI;
+using Customers.Db.Models;
 using Microsoft.AspNet.Membership.OpenAuth;
 
 namespace Customers.Application.Account
@@ -15,8 +15,7 @@ namespace Customers.Application.Account
 
     protected void RegisterUser_CreatedUser(object sender, EventArgs e)
     {
-      var roleName = IsCustomer.Checked ? "Customer" : "Employee";
-      Roles.AddUserToRole(RegisterUser.UserName, roleName);
+      AddUserToRole();
 
       FormsAuthentication.SetAuthCookie(RegisterUser.UserName, createPersistentCookie: false);
 
@@ -25,8 +24,49 @@ namespace Customers.Application.Account
       {
         continueUrl = "~/";
       }
-      
+
       Response.Redirect(continueUrl);
+    }
+
+    private void AddUserToRole()
+    {
+      var user = Repository.Users.First(x => x.Name == RegisterUser.UserName);
+
+      if (IsCustomer.Checked)
+      {
+        Roles.AddUserToRole(user.Name, "Customer");
+
+        var address = new Address
+        {
+          House = HouseTextBox.Text,
+          Street = StreetTextBox.Text
+        };
+
+        var customerInfo = new CustomerInfo
+        {
+          Address = address,
+          CompanyName = CompanyTextBox.Text,
+          User = user
+        };
+
+        Repository.CreateCustomer(customerInfo);
+      }
+      else
+      {
+        Roles.AddUserToRole(user.Name, "Employee");
+
+        var employeeInfo = new Db.Models.EmployeeInfo
+        {
+          User = user
+        };
+
+        Repository.CreateEmployee(employeeInfo);
+      }
+    }
+
+    protected void IsCustomer_OnCheckedChanged(object sender, EventArgs e)
+    {
+      CustomerInfoDiv.Visible = !CustomerInfoDiv.Visible;
     }
   }
 }

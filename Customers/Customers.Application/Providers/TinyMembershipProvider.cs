@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Specialized;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Text;
 using System.Web.Hosting;
@@ -77,8 +78,18 @@ namespace Customers.Application.Providers
 
     private string GetPasswordHash(string password)
     {
-      byte[] bytes = Encoding.UTF8.GetBytes(password);
-      return Hash.CreateSHA1(bytes).ToString();
+      using (SHA1 sha1 = SHA1.Create())
+      {
+        var bytes = Encoding.UTF8.GetBytes(password);
+
+        byte[] hash = sha1.ComputeHash(bytes);
+        var sb = new StringBuilder(hash.Length);
+
+        foreach (byte b in hash)
+          sb.Append(b.ToString("X2"));
+
+        return sb.ToString();
+      }
     }
 
     public override bool ChangePasswordQuestionAndAnswer(string username, string password, string newPasswordQuestion,

@@ -20,25 +20,18 @@
       </asp:GridView>
     </div> 
     <div style="float: right; width: 50%;" >
-      <asp:ObjectDataSource ID="OrdersDataSource" runat="server" SelectMethod="GetCustomerOrders" TypeName="Customers.Application.DataSources.OrdersDataSource">
+      <asp:ObjectDataSource ID="OrdersDataSource" runat="server" SelectMethod="GetCustomerOrders" TypeName="Customers.Application.DataSources.OrdersDataSource" DataObjectTypeName="Customers.Db.Models.Order" InsertMethod="CreateOrder">
         <SelectParameters>
           <asp:ControlParameter ControlID="CustomersGridView" DefaultValue="1" Name="customerId" PropertyName="SelectedDataKey.Values[&quot;UserId&quot;]" Type="Int32" />
         </SelectParameters>
       </asp:ObjectDataSource>
-      <asp:GridView ID="OrdersGridView" runat="server" AutoGenerateColumns="False" DataSourceID="OrdersDataSource" DataKeyNames="ManagerId" OnRowCommand="OrdersGridView_OnRowCommand" >
+      <asp:GridView ID="OrdersGridView" runat="server" AutoGenerateColumns="False" DataSourceID="OrdersDataSource" OnRowCommand="OrdersGridView_OnRowCommand" >
         <Columns>
-          <asp:BoundField DataField="Description" HeaderText="<% $Resources:GlobalRes, OrderDescriprtion %>">
-            <ItemStyle Width="40%" />
+          <asp:BoundField DataField="Id" HeaderText="Id" SortExpression="Id">
           </asp:BoundField>
-          <asp:TemplateField HeaderText="<% $Resources:GlobalRes, Manager %>">
-            <ItemTemplate>
-              <%# Eval("Manager.Name") %>
-            </ItemTemplate>
-            <ItemStyle Width="30%" />
-          </asp:TemplateField>
-          <asp:ButtonField HeaderText="<% $Resources:GlobalRes, ManagerInfo %>" 
-                           CommandName="GetManagerInfoCommand" ButtonType="Button" Text="<% $Resources:GlobalRes, ManagerInfoButton %>" 
-            />
+          <asp:BoundField DataField="Description" HeaderText="Description" SortExpression="Description" />
+          <asp:BoundField DataField="CustomerId" HeaderText="CustomerId" SortExpression="CustomerId" />
+          <asp:BoundField DataField="ManagerId" HeaderText="ManagerId" SortExpression="ManagerId" />
         </Columns>
       </asp:GridView>
     </div> 
