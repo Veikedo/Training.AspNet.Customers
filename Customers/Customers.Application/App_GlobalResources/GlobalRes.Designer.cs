@@ -340,6 +340,15 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Нет такой страницы.
+        /// </summary>
+        public static string NoSuchPage {
+            get {
+                return ResourceManager.GetString("NoSuchPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Описание.
         /// </summary>
         public static string OrderDescriprtion {

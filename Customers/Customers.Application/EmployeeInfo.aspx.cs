@@ -31,7 +31,7 @@ namespace Customers.Application
       // if employee with requested id is missing
       if (QueryId == null || Repository.Employees.All(x => x.UserId != QueryId))
       {
-        Response.Redirect("~/Default.aspx");
+        Response.Redirect("~/ErrorPages/NoSuchPage.aspx", true);
       }
     }
 

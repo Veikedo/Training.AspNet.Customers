@@ -24,6 +24,6 @@ namespace Customers.Db.Models
     [Required]
     public virtual Address Address { get; set; }
 
-    public ICollection<Order> Orders { get; set; }
+    public virtual ICollection<Order> Orders { get; set; }
   }
 }

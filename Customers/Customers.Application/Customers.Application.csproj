@@ -227,7 +227,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Done.aspx" />
     <Content Include="EmployeeInfo.aspx" />
-    <Content Include="Error.aspx" />
+    <Content Include="ErrorPages\Error.aspx" />
+    <Content Include="ErrorPages\NoSuchPage.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\cat.jpg" />
@@ -398,12 +399,19 @@
     <Compile Include="EmployeeInfo.aspx.designer.cs">
       <DependentUpon>EmployeeInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Error.aspx.cs">
+    <Compile Include="ErrorPages\Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Error.aspx.designer.cs">
+    <Compile Include="ErrorPages\Error.aspx.designer.cs">
       <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPages\NoSuchPage.aspx.cs">
+      <DependentUpon>NoSuchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPages\NoSuchPage.aspx.designer.cs">
+      <DependentUpon>NoSuchPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

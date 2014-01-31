@@ -16,19 +16,10 @@ namespace Customers.Application
       English
     }
 
-    protected BasePage()
-    {
-      Logger = LogManager.GetCurrentClassLogger();
-    }
-
-    public ApplicationCulture CurrentCulture
-    {
-      get { return (string) Session["culture"] == "ru-RU" ? ApplicationCulture.Russian : ApplicationCulture.English; }
-    }
-
     [Inject]
     public IRepository Repository { get; set; }
 
+    [Inject]
     public Logger Logger { get; set; }
 
     protected override void InitializeCulture()

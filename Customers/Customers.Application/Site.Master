@@ -75,7 +75,7 @@
               </asp:LoginView>
               <ul>
                 <li>
-                  <asp:LinkButton ID="LanguageToggle" runat="server" OnClick="LanguageToggle_Click" />
+                  <asp:LinkButton ID="LanguageToggle" runat="server" OnClick="LanguageToggle_Click" CausesValidation="False" />
                 </li>
               </ul>
             </section>

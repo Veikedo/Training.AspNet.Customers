@@ -80,7 +80,7 @@ namespace Customers.Application
     private void ToggleCulture()
     {
       Session["culture"] = CurrentCulture == "ru-RU" ? "en-US" : "ru-RU";
-      Response.Redirect(Request.RawUrl);
+      Response.Redirect(Request.RawUrl, true);
     }
   }
 }

@@ -8,11 +8,17 @@
   <asp:ObjectDataSource ID="CustomersDataSource" runat="server" SelectMethod="GetCustomers" TypeName="Customers.Application.DataSources.CustomersDataSource" />
   <div>
     <div style="float: left; width: 50%;">
-      <asp:GridView ID="CustomersGridView" runat="server" AutoGenerateColumns="False" SelectedRowStyle-BackColor="#E5E5E5"
+      <asp:GridView ID="CustomersGridView" runat="server" AutoGenerateColumns="False" SelectedRowStyle-BackColor="#E5E5E5" OnRowDataBound="CustomersGridView_OnRowDataBound"
                     DataSourceID="CustomersDataSource" DataKeyNames="UserId">
         <Columns>
           <asp:CommandField ShowSelectButton="True" SelectText="<% $Resources:GlobalRes, Select %>" />     
           <asp:BoundField DataField="CompanyName" HeaderText="<% $Resources:GlobalRes, Company %>" SortExpression="CompanyName" ItemStyle-Width="40%" />
+          <asp:BoundField DataField="UserId" ReadOnly="True" ShowHeader="False">
+            <HeaderStyle CssClass="Hidden" />
+            <ControlStyle CssClass="Hidden" />
+            <ItemStyle CssClass="Hidden" />
+          </asp:BoundField>
+
           <asp:TemplateField HeaderText="<% $Resources:GlobalRes, Address %>">
             <ItemTemplate>
               <%# Eval("Address.Street") %>, <%# Eval("Address.House") %>
