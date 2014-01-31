@@ -34,7 +34,7 @@
                   <li>
                     <asp:Label runat="server" AssociatedControlID="Email">Email</asp:Label><asp:TextBox runat="server" ID="Email" TextMode="Email" />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
-                                                CssClass="field-validation-error" ErrorMessage="<% $Resources:GlobalRes, EmailNameRequired %>" />
+                                                CssClass="field-validation-error" ErrorMessage="<% $Resources:GlobalRes, EmailRequired %>" />
                   </li>
                   <li>
                     <asp:Label runat="server" AssociatedControlID="Password">

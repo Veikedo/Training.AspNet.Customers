@@ -10,6 +10,11 @@ namespace Customers.Application.Account
   {
     protected void Page_Load(object sender, EventArgs e)
     {
+      if (User.Identity.IsAuthenticated)
+      {
+        Response.Redirect("~/");
+      }
+
       RegisterUser.ContinueDestinationPageUrl = Request.QueryString["ReturnUrl"];
     }
 
@@ -30,7 +35,7 @@ namespace Customers.Application.Account
 
     private void AddUserToRole()
     {
-      var user = Repository.Users.First(x => x.Name == RegisterUser.UserName);
+      User user = Repository.Users.First(x => x.Name == RegisterUser.UserName);
 
       if (IsCustomer.Checked)
       {
@@ -55,7 +60,7 @@ namespace Customers.Application.Account
       {
         Roles.AddUserToRole(user.Name, "Employee");
 
-        var employeeInfo = new Db.Models.EmployeeInfo
+        var employeeInfo = new EmployeeInfo
         {
           User = user
         };

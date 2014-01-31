@@ -49,5 +49,14 @@ namespace Customers.Db.Repository
     bool RemoveEmployee(int idRole);
 
     #endregion
+
+    #region PasswordResetLink
+
+    IQueryable<PasswordResetLink> PasswordResetLinks { get; }
+    bool CreatePasswordResetLink(PasswordResetLink instance);
+    bool UpdatePasswordResetLink(PasswordResetLink instance);
+    bool RemovePasswordResetLink(int idResetLink);
+
+    #endregion 
   }
 }

@@ -142,6 +142,15 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Готово!.
+        /// </summary>
+        public static string Done {
+            get {
+                return ResourceManager.GetString("Done", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Редактировать.
         /// </summary>
         public static string Edit {
@@ -153,9 +162,9 @@ namespace Customers.Application.App_GlobalResources {
         /// <summary>
         ///   Looks up a localized string similar to Введите email.
         /// </summary>
-        public static string EmailNameRequired {
+        public static string EmailRequired {
             get {
-                return ResourceManager.GetString("EmailNameRequired", resourceCulture);
+                return ResourceManager.GetString("EmailRequired", resourceCulture);
             }
         }
         
@@ -187,6 +196,15 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Информация.
+        /// </summary>
+        public static string Info {
+            get {
+                return ResourceManager.GetString("Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Вход.
         /// </summary>
         public static string Login {
@@ -210,15 +228,6 @@ namespace Customers.Application.App_GlobalResources {
         public static string Manager {
             get {
                 return ResourceManager.GetString("Manager", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Информация.
-        /// </summary>
-        public static string ManagerInfo {
-            get {
-                return ResourceManager.GetString("ManagerInfo", resourceCulture);
             }
         }
         
@@ -268,11 +277,29 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Пароль успешно изменен!.
+        /// </summary>
+        public static string PasswordChanged {
+            get {
+                return ResourceManager.GetString("PasswordChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Пароль должен быть не менее .
         /// </summary>
         public static string PasswordLengthWarning {
             get {
                 return ResourceManager.GetString("PasswordLengthWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Введите Ваш email и мы вышлем Вам дальнейшие инструкции.
+        /// </summary>
+        public static string PasswordRecoveryInfo {
+            get {
+                return ResourceManager.GetString("PasswordRecoveryInfo", resourceCulture);
             }
         }
         
@@ -286,11 +313,47 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Забыл пароль.
+        /// </summary>
+        public static string PasswordReset {
+            get {
+                return ResourceManager.GetString("PasswordReset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Готово.
+        /// </summary>
+        public static string Ready {
+            get {
+                return ResourceManager.GetString("Ready", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Регистрация.
         /// </summary>
         public static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ссылка для изменения пароля отправлена.
+        /// </summary>
+        public static string ResetLinkSent {
+            get {
+                return ResourceManager.GetString("ResetLinkSent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Выбрать.
+        /// </summary>
+        public static string Select {
+            get {
+                return ResourceManager.GetString("Select", resourceCulture);
             }
         }
         

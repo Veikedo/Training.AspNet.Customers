@@ -6,9 +6,11 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
   <div>
     <div style="float: left; width: 50%;" >
-      <asp:DetailsView ID="UserView" runat="server" AutoGenerateRows="False" DataSourceID="EmployeeDataSource" Height="50px" Width="125px" Visible="<%# IsOwner %>">
+      <asp:DetailsView HeaderText="<% $Resources:GlobalRes, Manager %>" ID="UserView" 
+                       HeaderStyle-Font-Bold="True" HeaderStyle-Font-Size="1.2em"
+                       runat="server" AutoGenerateRows="False" DataSourceID="EmployeeDataSource" Height="50px" Width="125px" Visible="<%# IsOwner %>">
         <Fields>
-          <asp:BoundField DataField="Name" HeaderText="<%$ Resources:GlobalRes, Name %>" SortExpression="Name" />
+          <asp:BoundField DataField="Name" ShowHeader="False" HeaderText="<%$ Resources:GlobalRes, Name %>" SortExpression="Name" />
           <asp:BoundField DataField="Id" ReadOnly="True" ShowHeader="False">
             <HeaderStyle CssClass="Hidden" />
             <ControlStyle CssClass="Hidden" />
@@ -23,9 +25,11 @@
                             UpdateText="<% $Resources:GlobalRes,Update %>"  CancelText="<% $Resources:GlobalRes,Cancel %>" />
         </Fields>
       </asp:DetailsView>
-      <asp:DetailsView ID="UserView1" runat="server" AutoGenerateRows="False" DataSourceID="EmployeeDataSource" Height="50px" Width="125px" Visible="<%# !IsOwner %>">
+      <asp:DetailsView HeaderText="<% $Resources:GlobalRes, Manager %>" DataSourceID="EmployeeDataSource"
+                       HeaderStyle-Font-Bold="True" HeaderStyle-Font-Size="1.2em"
+                       ID="UserView1" runat="server" AutoGenerateRows="False"  Height="50px" Width="125px" Visible="<%# !IsOwner %>">
         <Fields>
-          <asp:BoundField DataField="Name" HeaderText="<%$ Resources:GlobalRes, Name %>" SortExpression="Name" />
+          <asp:BoundField DataField="Name" ShowHeader="False" HeaderText="<%$ Resources:GlobalRes, Name %>" SortExpression="Name" />
           <asp:BoundField DataField="Id" ReadOnly="True" ShowHeader="False">
             <HeaderStyle CssClass="Hidden" />
             <ControlStyle CssClass="Hidden" />

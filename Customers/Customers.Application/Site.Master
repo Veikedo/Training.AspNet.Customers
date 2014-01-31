@@ -58,6 +58,11 @@
                         <asp:Literal runat="server" Text="<%$Resources:GlobalRes, Login%>" />
                       </a>
                     </li>
+                    <li>
+                      <a id="resetLink" runat="server" href="~/Account/PasswordReset.aspx">
+                        <asp:Literal runat="server" Text="<%$Resources:GlobalRes, PasswordReset%>" />
+                      </a>
+                    </li>
                   </ul>
                 </AnonymousTemplate>
                 <LoggedInTemplate>

@@ -150,7 +150,7 @@
   <data name="UserNameRequired" xml:space="preserve">
     <value>Введите имя</value>
   </data>
-  <data name="EmailNameRequired" xml:space="preserve">
+  <data name="EmailRequired" xml:space="preserve">
     <value>Введите email</value>
   </data>
   <data name="PasswordRequired" xml:space="preserve">
@@ -177,7 +177,7 @@
   <data name="ManagerInfoButton" xml:space="preserve">
     <value>Поглядеть</value>
   </data>
-  <data name="ManagerInfo" xml:space="preserve">
+  <data name="Info" xml:space="preserve">
     <value>Информация</value>
   </data>
   <data name="Name" xml:space="preserve">
@@ -212,5 +212,26 @@
   </data>
   <data name="Slaves" xml:space="preserve">
     <value>Подчиненные</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Выбрать</value>
+  </data>
+  <data name="PasswordRecoveryInfo" xml:space="preserve">
+    <value>Введите Ваш email и мы вышлем Вам дальнейшие инструкции</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Готово</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Готово!</value>
+  </data>
+  <data name="PasswordReset" xml:space="preserve">
+    <value>Забыл пароль</value>
+  </data>
+  <data name="ResetLinkSent" xml:space="preserve">
+    <value>Ссылка для изменения пароля отправлена</value>
+  </data>
+  <data name="PasswordChanged" xml:space="preserve">
+    <value>Пароль успешно изменен!</value>
   </data>
 </root>

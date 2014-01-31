@@ -6,6 +6,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Web.Hosting;
 using System.Web.Security;
+using Customers.Application.Helpers;
 using Customers.Db.Models;
 using Customers.Db.Repository;
 using Microsoft.Practices.ServiceLocation;
@@ -67,29 +68,13 @@ namespace Customers.Application.Providers
       {
         Name = username,
         Email = email,
-        Password = GetPasswordHash(password),
+        Password = CryptoHelper.GetPasswordHash(password),
       };
 
       _repository.CreateUser(user);
 
       status = MembershipCreateStatus.Success;
       return GetUser(username, false);
-    }
-
-    private string GetPasswordHash(string password)
-    {
-      using (SHA1 sha1 = SHA1.Create())
-      {
-        var bytes = Encoding.UTF8.GetBytes(password);
-
-        byte[] hash = sha1.ComputeHash(bytes);
-        var sb = new StringBuilder(hash.Length);
-
-        foreach (byte b in hash)
-          sb.Append(b.ToString("X2"));
-
-        return sb.ToString();
-      }
     }
 
     public override bool ChangePasswordQuestionAndAnswer(string username, string password, string newPasswordQuestion,
@@ -100,16 +85,16 @@ namespace Customers.Application.Providers
 
     public override string GetPassword(string username, string answer)
     {
-      throw new NotImplementedException();
+      return "Lol";
     }
 
     public override bool ChangePassword(string username, string oldPassword, string newPassword)
     {
       User user = _repository.Users.FirstOrDefault(x => x.Name == username);
 
-      if (user != null && user.Password == GetPasswordHash(oldPassword))
+      if (user != null && user.Password == CryptoHelper.GetPasswordHash(oldPassword))
       {
-        user.Password = GetPasswordHash(newPassword);
+        user.Password = CryptoHelper.GetPasswordHash(newPassword);
         _repository.UpdateUser(user);
 
         return true;
@@ -131,7 +116,7 @@ namespace Customers.Application.Providers
     public override bool ValidateUser(string username, string password)
     {
       var user = _repository.Users.FirstOrDefault(x => x.Name == username);
-      return user != null && user.Password == GetPasswordHash(password);
+      return user != null && user.Password == CryptoHelper.GetPasswordHash(password);
     }
 
     public override bool UnlockUser(string userName)
@@ -200,7 +185,7 @@ namespace Customers.Application.Providers
 
     public override bool EnablePasswordRetrieval
     {
-      get { return true; }
+      get { return false; }
     }
 
     public override bool EnablePasswordReset

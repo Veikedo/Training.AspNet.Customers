@@ -5,20 +5,29 @@ namespace Customers.Application
 {
   public partial class EmployeeInformation : BasePage
   {
-    public bool IsOwner
+    protected bool IsOwner
     {
-      get { return User.Identity.Name == Repository.Users.FirstOrDefault(x => x.Id == EmployeeId).Name; }
+      get { return User.Identity.Name == Repository.Users.First(x => x.Id == QueryId).Name; }
     }
 
-    public int EmployeeId
+    private int? QueryId
     {
-      get { return Convert.ToInt32(Request.QueryString["id"]); }
+      get
+      {
+        int id;
+        if (int.TryParse(Request.QueryString["id"], out id))
+        {
+          return id;
+        }
+
+        return null;
+      }
     }
+
     protected void Page_Load(object sender, EventArgs e)
     {
-      bool hasNoId = string.IsNullOrEmpty(Request.QueryString["id"]);
-
-      if (hasNoId)
+      // if employee with requested id is missing
+      if (QueryId == null || Repository.Employees.All(x => x.UserId != QueryId))
       {
         Response.Redirect("~/Default.aspx");
       }

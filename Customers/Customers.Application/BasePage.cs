@@ -15,5 +15,7 @@ namespace Customers.Application
     {
       Logger = LogManager.GetCurrentClassLogger();
     }
+
+
   }
 }

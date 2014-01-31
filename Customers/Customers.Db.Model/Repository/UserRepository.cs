@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Data.Entity;
+using System.Linq;
 using Customers.Db.Models;
 
 namespace Customers.Db.Repository
@@ -30,6 +31,8 @@ namespace Customers.Db.Repository
                                               instance.Name, instance.Version + 1,
                                               instance.Id, instance.Version);
 
+      Db.Entry(instance).State = EntityState.Modified;
+      Db.SaveChanges();
       return res > 0;
     }
 

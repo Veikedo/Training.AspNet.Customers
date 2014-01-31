@@ -16,5 +16,6 @@ namespace Customers.Db
     public DbSet<EmployeeInfo> Employees { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<Role> Roles { get; set; }
+    public DbSet<PasswordResetLink> PasswordResetLinks { get; set; }
   }
 }
