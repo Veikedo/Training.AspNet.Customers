@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Web.Security;
+using System.Web.UI.WebControls;
 
 namespace Customers.Application
 {
@@ -31,6 +33,16 @@ namespace Customers.Application
       {
         Response.Redirect("~/Default.aspx");
       }
+    }
+
+    protected void UserView_OnItemUpdated(object sender, DetailsViewUpdatedEventArgs e)
+    {
+      FormsAuthentication.SignOut();
+
+      var newName = (string) e.NewValues["Name"];
+      FormsAuthentication.SetAuthCookie(newName, true);
+
+      Response.Redirect(Request.RawUrl);
     }
   }
 }

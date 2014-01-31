@@ -83,7 +83,6 @@ D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\bin\NLog.config
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\bin\Customers.Application.dll.config
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\bin\Customers.Application.dll
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\bin\Customers.Application.pdb
-D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\bin\en\Customers.Application.resources.dll
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\bin\x86\sqlcese40.dll
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\bin\x86\sqlceqp40.dll
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\bin\x86\sqlceme40.dll
@@ -155,8 +154,9 @@ D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\bin\Microsoft.AspN
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\obj\Debug\Customers.Application.csprojResolveAssemblyReference.cache
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\obj\Debug\Customers.Application.App_GlobalResources.GlobalRes.resources
-D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\obj\Debug\Customers.Application.App_GlobalResources.GlobalRes.en.resources
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\obj\Debug\Customers.Application.csproj.GenerateResource.Cache
-D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\obj\Debug\en\Customers.Application.resources.dll
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\obj\Debug\Customers.Application.dll
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\obj\Debug\Customers.Application.pdb
+D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\bin\en-US\Customers.Application.resources.dll
+D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\obj\Debug\Customers.Application.App_GlobalResources.GlobalRes.en-US.resources
+D:\Projects\Trainings\ASP.NET\Customers\Customers.Application\obj\Debug\en-US\Customers.Application.resources.dll

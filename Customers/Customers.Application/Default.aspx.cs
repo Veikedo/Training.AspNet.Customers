@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Security;
 using System.Web.UI.WebControls;
+using Customers.Application.App_GlobalResources;
 
 namespace Customers.Application
 {
@@ -8,7 +9,10 @@ namespace Customers.Application
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-      
+//      if (!IsPostBack)
+//      {
+        Page.Title = GlobalRes.Orders;
+//      }
     }
 
     protected void OrdersGridView_OnRowCommand(object sender, GridViewCommandEventArgs e)

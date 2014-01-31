@@ -79,6 +79,15 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Сменить пароль.
+        /// </summary>
+        public static string ChangePwd {
+            get {
+                return ResourceManager.GetString("ChangePwd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to символов.
         /// </summary>
         public static string CharactersLengh {
@@ -106,6 +115,24 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Подтвердите новый пароль.
+        /// </summary>
+        public static string ConfirmNewPwd {
+            get {
+                return ResourceManager.GetString("ConfirmNewPwd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Подтвердите новый пароль.
+        /// </summary>
+        public static string ConfirmNewPwdRequired {
+            get {
+                return ResourceManager.GetString("ConfirmNewPwdRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Подтвердите пароль.
         /// </summary>
         public static string ConfirmPassword {
@@ -129,6 +156,15 @@ namespace Customers.Application.App_GlobalResources {
         public static string ConfirmPasswordRequired {
             get {
                 return ResourceManager.GetString("ConfirmPasswordRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Текущий пароль.
+        /// </summary>
+        public static string CurrentPassword {
+            get {
+                return ResourceManager.GetString("CurrentPassword", resourceCulture);
             }
         }
         
@@ -165,6 +201,24 @@ namespace Customers.Application.App_GlobalResources {
         public static string EmailRequired {
             get {
                 return ResourceManager.GetString("EmailRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ошибка.
+        /// </summary>
+        public static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Забыл пароль.
+        /// </summary>
+        public static string ForgotPassword {
+            get {
+                return ResourceManager.GetString("ForgotPassword", resourceCulture);
             }
         }
         
@@ -223,6 +277,33 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The external login was removed..
+        /// </summary>
+        public static string Manage_Page_Load_The_external_login_was_removed_ {
+            get {
+                return ResourceManager.GetString("Manage_Page_Load_The_external_login_was_removed_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your password has been set..
+        /// </summary>
+        public static string Manage_Page_Load_Your_password_has_been_set_ {
+            get {
+                return ResourceManager.GetString("Manage_Page_Load_Your_password_has_been_set_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Управление аккаунтом.
+        /// </summary>
+        public static string ManageAccount {
+            get {
+                return ResourceManager.GetString("ManageAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Менеджер.
         /// </summary>
         public static string Manager {
@@ -232,20 +313,29 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Поглядеть.
-        /// </summary>
-        public static string ManagerInfoButton {
-            get {
-                return ResourceManager.GetString("ManagerInfoButton", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Имя.
         /// </summary>
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Новый пароль.
+        /// </summary>
+        public static string NewPassword {
+            get {
+                return ResourceManager.GetString("NewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обязательно!.
+        /// </summary>
+        public static string NewPasswordRequired {
+            get {
+                return ResourceManager.GetString("NewPasswordRequired", resourceCulture);
             }
         }
         
@@ -273,6 +363,15 @@ namespace Customers.Application.App_GlobalResources {
         public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ваш пароль был изменен.
+        /// </summary>
+        public static string password_has_been_changed {
+            get {
+                return ResourceManager.GetString("password_has_been_changed", resourceCulture);
             }
         }
         
@@ -313,15 +412,6 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Забыл пароль.
-        /// </summary>
-        public static string PasswordReset {
-            get {
-                return ResourceManager.GetString("PasswordReset", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Готово.
         /// </summary>
         public static string Ready {
@@ -336,6 +426,15 @@ namespace Customers.Application.App_GlobalResources {
         public static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Запомнить?.
+        /// </summary>
+        public static string RememberMe {
+            get {
+                return ResourceManager.GetString("RememberMe", resourceCulture);
             }
         }
         
@@ -408,6 +507,15 @@ namespace Customers.Application.App_GlobalResources {
         public static string UserNameRequired {
             get {
                 return ResourceManager.GetString("UserNameRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Мы уже делаем всё хорошо, а пока вот вам рисунок котика.
+        /// </summary>
+        public static string WeGoingToMakeItGood {
+            get {
+                return ResourceManager.GetString("WeGoingToMakeItGood", resourceCulture);
             }
         }
     }

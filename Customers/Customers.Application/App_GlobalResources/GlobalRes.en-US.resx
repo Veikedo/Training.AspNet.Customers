@@ -123,4 +123,151 @@
   <data name="CharactersLengh" xml:space="preserve">
     <value>characters in length.</value>
   </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Hello</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Logoff" xml:space="preserve">
+    <value>Log off</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="UserNameRequired" xml:space="preserve">
+    <value>User name is required</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>Email is required</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Password is required</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>Confirm password is required!</value>
+  </data>
+  <data name="ConfirmPasswordNotMatch" xml:space="preserve">
+    <value>Confirm password doesn't match</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="OrderDescriprtion" xml:space="preserve">
+    <value>Descriprtion</value>
+  </data>
+  <data name="Manager" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="House" xml:space="preserve">
+    <value>House</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="CompanyNameRequired" xml:space="preserve">
+    <value>Company name is required</value>
+  </data>
+  <data name="HouseRequired" xml:space="preserve">
+    <value>House number is required</value>
+  </data>
+  <data name="StreetRequired" xml:space="preserve">
+    <value>Street is required</value>
+  </data>
+  <data name="Slaves" xml:space="preserve">
+    <value>Slaves</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="PasswordRecoveryInfo" xml:space="preserve">
+    <value>Input your email and we'll send you reset link</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done!</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Restore password</value>
+  </data>
+  <data name="ResetLinkSent" xml:space="preserve">
+    <value>Reset link sent</value>
+  </data>
+  <data name="PasswordChanged" xml:space="preserve">
+    <value>Password succesfully changed!</value>
+  </data>
+  <data name="WeGoingToMakeItGood" xml:space="preserve">
+    <value>We are going to make it good but for now here a pussy picture</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ManageAccount" xml:space="preserve">
+    <value>Manage account</value>
+  </data>
+  <data name="ChangePwd" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="CurrentPassword" xml:space="preserve">
+    <value>Current password</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="NewPasswordRequired" xml:space="preserve">
+    <value>New password is required!</value>
+  </data>
+  <data name="ConfirmNewPwd" xml:space="preserve">
+    <value>Confirm new password</value>
+  </data>
+  <data name="ConfirmNewPwdRequired" xml:space="preserve">
+    <value>Confirm new password is required</value>
+  </data>
+  <data name="password_has_been_changed" xml:space="preserve">
+    <value>Your password has been changed.</value>
+  </data>
+  <data name="Manage_Page_Load_Your_password_has_been_set_" xml:space="preserve">
+    <value>Your password has been set.</value>
+  </data>
+  <data name="Manage_Page_Load_The_external_login_was_removed_" xml:space="preserve">
+    <value>The external login was removed.</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember me?</value>
+  </data>
 </root>

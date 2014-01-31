@@ -11,6 +11,11 @@ namespace Customers.Application
     private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
     private string _antiXsrfTokenValue;
 
+    private string CurrentCulture
+    {
+      get { return (string) Session["culture"]; }
+    }
+
     protected void Page_Init(object sender, EventArgs e)
     {
       // The code below helps to protect against XSRF attacks
@@ -64,6 +69,18 @@ namespace Customers.Application
 
     protected void Page_Load(object sender, EventArgs e)
     {
+      LanguageToggle.Text = CurrentCulture == "ru-RU" ? "English" : "Русский";
+    }
+
+    protected void LanguageToggle_Click(object sender, EventArgs e)
+    {
+      ToggleCulture();
+    }
+
+    private void ToggleCulture()
+    {
+      Session["culture"] = CurrentCulture == "ru-RU" ? "en-US" : "ru-RU";
+      Response.Redirect(Request.RawUrl);
     }
   }
 }

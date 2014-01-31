@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Web;
-using System.Web.UI;
+using Customers.Application.App_GlobalResources;
 
 namespace Customers.Application.Account
 {
-  public partial class Login : Page
+  public partial class Login : BasePage
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-      RegisterHyperLink.NavigateUrl = "Register";
-      OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
+      Page.Title = GlobalRes.Login;
+    }
 
-      string returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-      if (!String.IsNullOrEmpty(returnUrl))
-      {
-        RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
-      }
+    protected void OnLoggedIn(object sender, EventArgs e)
+    {
+      Response.Redirect("~/");
     }
   }
 }

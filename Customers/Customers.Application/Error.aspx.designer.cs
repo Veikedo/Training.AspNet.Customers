@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Customers.Application.Account {
+namespace Customers.Application {
     
     
-    public partial class Login {
+    public partial class Error {
     }
 }

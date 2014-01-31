@@ -47,7 +47,7 @@
             <section id="login">
               <asp:LoginView runat="server" ViewStateMode="Disabled">
                 <AnonymousTemplate>
-                  <ul>
+                  <ul style="margin-bottom: 15px">
                     <li>
                       <a id="registerLink" runat="server" href="~/Account/Register">
                         <asp:Literal runat="server" Text="<%$Resources:GlobalRes, Register%>" />
@@ -60,19 +60,24 @@
                     </li>
                     <li>
                       <a id="resetLink" runat="server" href="~/Account/PasswordReset.aspx">
-                        <asp:Literal runat="server" Text="<%$Resources:GlobalRes, PasswordReset%>" />
+                        <asp:Literal runat="server" Text="<%$Resources:GlobalRes, ForgotPassword%>" />
                       </a>
                     </li>
                   </ul>
                 </AnonymousTemplate>
                 <LoggedInTemplate>
                   <p>
-                    <asp:Literal runat="server" Text="<%$Resources:GlobalRes, Hello %>" />, 
+                    <asp:Literal runat="server" Text="<%$Resources:GlobalRes, Hello %>" />,
                     <a runat="server" class="username" href="~/Account/Manage"><asp:LoginName runat="server" CssClass="username" /></a>!
                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="<%$Resources:GlobalRes, Logoff %>" LogoutPageUrl="~/" />
                   </p>
                 </LoggedInTemplate>
               </asp:LoginView>
+              <ul>
+                <li>
+                  <asp:LinkButton ID="LanguageToggle" runat="server" OnClick="LanguageToggle_Click" />
+                </li>
+              </ul>
             </section>
             <nav>
               <ul id="menu">

@@ -227,8 +227,10 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Done.aspx" />
     <Content Include="EmployeeInfo.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
+    <Content Include="Images\cat.jpg" />
     <Content Include="Images\heroAccent.png" />
     <Content Include="Images\orderedList0.png" />
     <Content Include="Images\orderedList1.png" />
@@ -247,9 +249,9 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="App_GlobalResources\GlobalRes.en.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>GlobalRes.en.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="App_GlobalResources\GlobalRes.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>GlobalRes.en-US.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
@@ -322,10 +324,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GlobalRes.resx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\GlobalRes.en.Designer.cs">
+    <Compile Include="App_GlobalResources\GlobalRes.en-US.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GlobalRes.en.resx</DependentUpon>
+      <DependentUpon>GlobalRes.en-US.resx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
@@ -396,6 +398,13 @@
     <Compile Include="EmployeeInfo.aspx.designer.cs">
       <DependentUpon>EmployeeInfo.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -406,6 +415,7 @@
     <Compile Include="Account\PasswordReset.aspx.designer.cs">
       <DependentUpon>PasswordReset.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\CultureHelper.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Helpers\CryptoHelper.cs" />
