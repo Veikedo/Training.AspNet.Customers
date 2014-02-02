@@ -13,12 +13,12 @@ namespace Customers.Application {
     public partial class Done {
         
         /// <summary>
-        /// MessageLiteral control.
+        /// Message control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal MessageLiteral;
+        protected global::System.Web.UI.WebControls.Literal Message;
     }
 }

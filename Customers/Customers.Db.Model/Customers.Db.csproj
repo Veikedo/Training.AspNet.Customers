@@ -52,8 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Address.cs" />
-    <Compile Include="Models\CustomerInfo.cs" />
-    <Compile Include="Models\EmployeeInfo.cs" />
+    <Compile Include="Models\CustomerCard.cs" />
+    <Compile Include="Models\EmployeeCard.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Order.cs" />

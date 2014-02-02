@@ -18,8 +18,8 @@ namespace Customers.Db.Models
     public string Email { get; set; }
     public virtual ICollection<Role> Roles { get; set; }
     public virtual PasswordResetLink PasswordResetLink { get; set; }
-    public virtual CustomerInfo CustomerInfo { get; set; }
-    public virtual EmployeeInfo EmployeeInfo { get; set; }
+    public virtual CustomerCard CustomerCard { get; set; }
+    public virtual EmployeeCard EmployeeCard { get; set; }
     public int Version { get; set; }
   }
 }

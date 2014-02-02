@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Customers.Application {
+namespace Customers.Application.ErrorPages {
     
     
     public partial class Error {

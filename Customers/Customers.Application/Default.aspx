@@ -30,7 +30,7 @@
     <div style="float: right; width: 50%;">
       <asp:ObjectDataSource ID="OrdersDataSource" runat="server" SelectMethod="GetCustomerOrders"
                             TypeName="Customers.Application.DataSources.OrdersDataSource" 
-                            DataObjectTypeName="Customers.Db.Models.Order" InsertMethod="CreateOrder">
+                            DataObjectTypeName="Customers.Db.Models.Order">
         <SelectParameters>
           <asp:ControlParameter ControlID="CustomersGridView" DefaultValue="0" Name="customerId" PropertyName="SelectedDataKey.Values[&quot;UserId&quot;]" Type="Int32" />
         </SelectParameters>

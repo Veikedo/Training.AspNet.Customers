@@ -169,7 +169,6 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
-    <Content Include="App_Data\ProjectsDb.sdf" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -225,7 +224,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="Done.aspx" />
+    <Content Include="Customer\CreateOrder.aspx" />
+    <Content Include="Message.aspx" />
     <Content Include="EmployeeInfo.aspx" />
     <Content Include="ErrorPages\Error.aspx" />
     <Content Include="ErrorPages\NoSuchPage.aspx" />
@@ -373,9 +373,17 @@
     <Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Customer\CreateOrder.aspx.cs">
+      <DependentUpon>CreateOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\CreateOrder.aspx.designer.cs">
+      <DependentUpon>CreateOrder.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataSources\CustomersDataSource.cs" />
     <Compile Include="DataSources\BaseDataSource.cs" />
-    <Compile Include="DataSources\EmployeeDataSource.cs" />
+    <Compile Include="DataSources\EmployeeCardsDataSource.cs" />
+    <Compile Include="DataSources\UsersDataSource.cs" />
     <Compile Include="DataSources\ManagerSlavesDataSource.cs" />
     <Compile Include="DataSources\OrdersDataSource.cs" />
     <Compile Include="Default.aspx.cs">
@@ -385,12 +393,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Done.aspx.cs">
-      <DependentUpon>Done.aspx</DependentUpon>
+    <Compile Include="Message.aspx.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Done.aspx.designer.cs">
-      <DependentUpon>Done.aspx</DependentUpon>
+    <Compile Include="Message.aspx.designer.cs">
+      <DependentUpon>Message.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmployeeInfo.aspx.cs">
       <DependentUpon>EmployeeInfo.aspx</DependentUpon>
@@ -471,7 +479,10 @@
       <LastGenOutput>GlobalRes.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Employee\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

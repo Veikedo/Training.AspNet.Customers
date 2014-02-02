@@ -6,8 +6,9 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
   <div>
     <div style="float: left; width: 50%;" >
-      <asp:DetailsView HeaderText="<% $Resources:GlobalRes, Manager %>" ID="UserView" 
+      <asp:DetailsView HeaderText="<%$ Resources:GlobalRes, Manager %>" ID="UserView" 
                        HeaderStyle-Font-Bold="True" HeaderStyle-Font-Size="1.2em" OnItemUpdated="UserView_OnItemUpdated"
+                       OnItemUpdating="UserView_OnItemUpdating"
                        runat="server" AutoGenerateRows="False" DataSourceID="ManangerDataSource" Height="50px" Width="125px" Visible="<%# IsOwner %>">
         <Fields>
           <asp:BoundField DataField="Name" ShowHeader="False" HeaderText="<%$ Resources:GlobalRes, Name %>" SortExpression="Name" />
@@ -16,11 +17,11 @@
             <ControlStyle CssClass="Hidden" />
             <ItemStyle CssClass="Hidden" />
           </asp:BoundField>
-          <asp:CommandField ShowEditButton="True" EditText="<% $Resources:GlobalRes,Edit %>"
+          <asp:CommandField ShowEditButton="True" EditText="<% $Resources:GlobalRes,Edit %>" 
                             UpdateText="<% $Resources:GlobalRes,Update %>"  CancelText="<% $Resources:GlobalRes,Cancel %>" />
         </Fields>
       </asp:DetailsView>
-      <asp:DetailsView HeaderText="<% $Resources:GlobalRes, Manager %>" DataSourceID="ManangerDataSource"
+      <asp:DetailsView HeaderText="<%$ Resources:GlobalRes, Manager %>" DataSourceID="ManangerDataSource"
                        HeaderStyle-Font-Bold="True" HeaderStyle-Font-Size="1.2em"
                        ID="UserView1" runat="server" AutoGenerateRows="False"  Height="50px" Width="125px" Visible="<%# !IsOwner %>">
         <Fields>
@@ -39,7 +40,6 @@
       </asp:DetailsView>
     </div> 
     <div style="float: right; width: 50%;">
-      
       <asp:ObjectDataSource ID="SlavesDataSource" runat="server" SelectMethod="GetSlaves" TypeName="Customers.Application.DataSources.ManagerSlavesDataSource">
         <SelectParameters>
           <asp:QueryStringParameter DefaultValue="0" Name="managerId" QueryStringField="id" Type="Int32" />
@@ -54,14 +54,16 @@
           </asp:TemplateField>
         </Columns>
       </asp:GridView>
-      
     </div>
   </div>
-  <asp:ObjectDataSource ID="ManangerDataSource" runat="server" SelectMethod="GetEmployee" UpdateMethod="UpdateEmployee"
-                        TypeName="Customers.Application.DataSources.EmployeeDataSource" 
-                        DataObjectTypeName="Customers.Db.Models.User" >
+  <asp:ObjectDataSource ID="ManangerDataSource" runat="server" SelectMethod="GetUser"
+                        UpdateMethod="UpdateUser" TypeName="Customers.Application.DataSources.UsersDataSource" >
     <SelectParameters>
       <asp:QueryStringParameter DefaultValue="0" Name="id" QueryStringField="id" Type="Int32" />
     </SelectParameters>
+    <UpdateParameters>
+      <asp:QueryStringParameter Name="id" QueryStringField="id" Type="Int32" />
+      <asp:Parameter Name="name" Type="String" />
+    </UpdateParameters>
   </asp:ObjectDataSource>
 </asp:Content>

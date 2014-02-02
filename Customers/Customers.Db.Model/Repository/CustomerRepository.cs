@@ -6,16 +6,16 @@ namespace Customers.Db.Repository
 {
   public partial class EntityRepository
   {
-    public IQueryable<CustomerInfo> Customers
+    public IQueryable<CustomerCard> CustomerCards
     {
-      get { return Db.Customers; }
+      get { return Db.CustomerCards; }
     }
 
-    public bool CreateCustomer(CustomerInfo instance)
+    public bool CreateCustomerCard(CustomerCard instance)
     {
       if (instance.UserId == 0)
       {
-        Db.Customers.Add(instance);
+        Db.CustomerCards.Add(instance);
         Db.SaveChanges();
         return true;
       }
@@ -23,9 +23,9 @@ namespace Customers.Db.Repository
       return false;
     }
 
-    public bool UpdateCustomer(CustomerInfo instance)
+    public bool UpdateCustomerCard(CustomerCard instance)
     {
-      CustomerInfo cache = Db.Customers.FirstOrDefault(p => p.UserId == instance.UserId);
+      CustomerCard cache = Db.CustomerCards.FirstOrDefault(p => p.UserId == instance.UserId);
 
       if (cache != null)
       {
@@ -41,13 +41,13 @@ namespace Customers.Db.Repository
       return false;
     }
 
-    public bool RemoveCustomer(int idCustomer)
+    public bool RemoveCustomerCard(int idCustomerCard)
     {
-      CustomerInfo instance = Db.Customers.FirstOrDefault(p => p.UserId == idCustomer);
+      CustomerCard instance = Db.CustomerCards.FirstOrDefault(p => p.UserId == idCustomerCard);
 
       if (instance != null)
       {
-        Db.Customers.Remove(instance);
+        Db.CustomerCards.Remove(instance);
         Db.SaveChanges();
         return true;
       }

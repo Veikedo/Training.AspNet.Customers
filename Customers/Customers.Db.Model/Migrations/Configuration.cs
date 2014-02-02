@@ -1,4 +1,5 @@
 using System.Data.Entity.Migrations;
+using Customers.Db.Models;
 
 namespace Customers.Db.Migrations
 {
@@ -13,18 +14,9 @@ namespace Customers.Db.Migrations
 
     protected override void Seed(ProjectsDbContext context)
     {
-      //  This method will be called after migrating to the latest version.
-
-      //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-      //  to avoid creating duplicate seed data. E.g.
-      //
-      //    context.People.AddOrUpdate(
-      //      p => p.FullName,
-      //      new Person { FullName = "Andrew Peters" },
-      //      new Person { FullName = "Brice Lambson" },
-      //      new Person { FullName = "Rowan Miller" }
-      //    );
-      //
+      context.Roles.AddOrUpdate(role => role.Code,
+                                new Role {Code = "Customer"},
+                                new Role {Code = "Employee"});
     }
   }
 }

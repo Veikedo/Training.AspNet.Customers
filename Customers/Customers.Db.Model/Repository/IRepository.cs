@@ -7,10 +7,10 @@ namespace Customers.Db.Repository
   {
     #region Customer
 
-    IQueryable<CustomerInfo> Customers { get; }
-    bool CreateCustomer(CustomerInfo instance);
-    bool UpdateCustomer(CustomerInfo instance);
-    bool RemoveCustomer(int idCustomer);
+    IQueryable<CustomerCard> CustomerCards { get; }
+    bool CreateCustomerCard(CustomerCard instance);
+    bool UpdateCustomerCard(CustomerCard instance);
+    bool RemoveCustomerCard(int idCustomerCard);
 
     #endregion
 
@@ -43,10 +43,10 @@ namespace Customers.Db.Repository
 
     #region Employee
 
-    IQueryable<EmployeeInfo> Employees { get; }
-    bool CreateEmployee(EmployeeInfo instance);
-    bool UpdateEmployee(EmployeeInfo instance);
-    bool RemoveEmployee(int idRole);
+    IQueryable<EmployeeCard> EmployeeCards { get; }
+    bool CreateEmployeeCard(EmployeeCard instance);
+    bool UpdateEmployeeCard(EmployeeCard instance);
+    bool RemoveEmployeeCard(int idEmployeeCard);
 
     #endregion
 

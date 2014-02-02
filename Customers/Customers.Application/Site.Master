@@ -86,6 +86,16 @@
                     <asp:Literal runat="server" Text="<%$Resources:GlobalRes, Orders %>" /> 
                   </a>
                 </li>
+                <li runat="server" ID="CreateOrderLink" Visible="False">
+                  <a runat="server" href="~/Customer/CreateOrder.aspx">
+                    <asp:Literal runat="server" Text="<%$Resources:GlobalRes, CreateOrder %>" /> 
+                  </a>
+                </li>
+                <li runat="server" ID="SelectManagerLink" Visible="False">
+                  <a runat="server" href="~/Customer/CreateOrder.aspx">
+                    <asp:Literal runat="server" Text="<%$Resources:GlobalRes, SelectManager %>" /> 
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>

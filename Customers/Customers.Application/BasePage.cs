@@ -19,7 +19,7 @@ namespace Customers.Application
     [Inject]
     public IRepository Repository { get; set; }
 
-    [Inject]
+//    [Inject]
     public Logger Logger { get; set; }
 
     protected override void InitializeCulture()
@@ -30,7 +30,7 @@ namespace Customers.Application
       {
         Session["culture"] = culture = "ru-RU";
       }
-
+      Logger = LogManager.GetCurrentClassLogger();
       Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(culture);
       Thread.CurrentThread.CurrentUICulture = new CultureInfo(culture);
 

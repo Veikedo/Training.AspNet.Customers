@@ -8,9 +8,9 @@ namespace Customers.Application.DataSources
   [UsedImplicitly]
   public class CustomersDataSource : BaseDataSource
   {
-    public IEnumerable<CustomerInfo> GetCustomers()
+    public IEnumerable<CustomerCard> GetCustomers()
     {
-      return Repository.Customers;
+      return Repository.CustomerCards;
     }
   }
 }

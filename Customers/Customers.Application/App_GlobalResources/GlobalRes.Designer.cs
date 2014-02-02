@@ -61,6 +61,15 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Доступ запрещен.
+        /// </summary>
+        public static string AccessNotAllowed {
+            get {
+                return ResourceManager.GetString("AccessNotAllowed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Адрес.
         /// </summary>
         public static string Address {
@@ -160,6 +169,15 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Сделать заказ.
+        /// </summary>
+        public static string CreateOrder {
+            get {
+                return ResourceManager.GetString("CreateOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Текущий пароль.
         /// </summary>
         public static string CurrentPassword {
@@ -174,6 +192,15 @@ namespace Customers.Application.App_GlobalResources {
         public static string Customer {
             get {
                 return ResourceManager.GetString("Customer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Описание.
+        /// </summary>
+        public static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
             }
         }
         
@@ -201,6 +228,15 @@ namespace Customers.Application.App_GlobalResources {
         public static string EmailRequired {
             get {
                 return ResourceManager.GetString("EmailRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Работники.
+        /// </summary>
+        public static string Employees {
+            get {
+                return ResourceManager.GetString("Employees", resourceCulture);
             }
         }
         
@@ -313,6 +349,15 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Сообщение.
+        /// </summary>
+        public static string Message {
+            get {
+                return ResourceManager.GetString("Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Имя.
         /// </summary>
         public static string Name {
@@ -349,11 +394,29 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ваш заказ создан.
+        /// </summary>
+        public static string OrderCreated {
+            get {
+                return ResourceManager.GetString("OrderCreated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Описание.
         /// </summary>
         public static string OrderDescriprtion {
             get {
                 return ResourceManager.GetString("OrderDescriprtion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Обязательно!.
+        /// </summary>
+        public static string OrderDescriptionRequired {
+            get {
+                return ResourceManager.GetString("OrderDescriptionRequired", resourceCulture);
             }
         }
         
@@ -466,6 +529,15 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Выбрать менеджера.
+        /// </summary>
+        public static string SelectManager {
+            get {
+                return ResourceManager.GetString("SelectManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Подчиненные.
         /// </summary>
         public static string Slaves {
@@ -498,6 +570,15 @@ namespace Customers.Application.App_GlobalResources {
         public static string Update {
             get {
                 return ResourceManager.GetString("Update", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Пользователь с таким именем уже существует.
+        /// </summary>
+        public static string UserAlreadyExists {
+            get {
+                return ResourceManager.GetString("UserAlreadyExists", resourceCulture);
             }
         }
         

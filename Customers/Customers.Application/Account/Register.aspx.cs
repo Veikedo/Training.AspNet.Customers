@@ -47,25 +47,25 @@ namespace Customers.Application.Account
           Street = StreetTextBox.Text
         };
 
-        var customerInfo = new CustomerInfo
+        var customerInfo = new CustomerCard
         {
           Address = address,
           CompanyName = CompanyTextBox.Text,
           User = user
         };
 
-        Repository.CreateCustomer(customerInfo);
+        Repository.CreateCustomerCard(customerInfo);
       }
       else
       {
         Roles.AddUserToRole(user.Name, "Employee");
 
-        var employeeInfo = new EmployeeInfo
+        var employeeInfo = new EmployeeCard
         {
           User = user
         };
 
-        Repository.CreateEmployee(employeeInfo);
+        Repository.CreateEmployeeCard(employeeInfo);
       }
     }
 

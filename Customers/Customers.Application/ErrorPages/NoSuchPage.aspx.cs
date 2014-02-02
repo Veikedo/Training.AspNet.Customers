@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Customers.Application.ErrorPages
 {
-  public partial class NoSuchPage : System.Web.UI.Page
+  public partial class NoSuchPage : BasePage
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
   }
 }

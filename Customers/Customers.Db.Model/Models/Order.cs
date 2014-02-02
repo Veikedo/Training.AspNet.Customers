@@ -9,11 +9,11 @@ namespace Customers.Db.Models
     public int CustomerId { get; set; }
 
     [ForeignKey("CustomerId")]
-    public virtual CustomerInfo Customer { get; set; }
+    public virtual CustomerCard Customer { get; set; }
 
     public int ManagerId { get; set; }
 
     [ForeignKey("ManagerId")]
-    public virtual EmployeeInfo Manager { get; set; }
+    public virtual EmployeeCard Manager { get; set; }
   }
 }

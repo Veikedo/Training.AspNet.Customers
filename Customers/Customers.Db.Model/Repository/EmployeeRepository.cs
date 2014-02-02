@@ -6,16 +6,16 @@ namespace Customers.Db.Repository
 {
   public partial class EntityRepository
   {
-    public IQueryable<EmployeeInfo> Employees
+    public IQueryable<EmployeeCard> EmployeeCards
     {
-      get { return Db.Employees; }
+      get { return Db.EmployeeCards; }
     }
 
-    public bool CreateEmployee(EmployeeInfo instance)
+    public bool CreateEmployeeCard(EmployeeCard instance)
     {
       if (instance.UserId == 0)
       {
-        Db.Employees.Add(instance);
+        Db.EmployeeCards.Add(instance);
         Db.SaveChanges();
         return true;
       }
@@ -23,9 +23,9 @@ namespace Customers.Db.Repository
       return false;
     }
 
-    public bool UpdateEmployee(EmployeeInfo instance)
+    public bool UpdateEmployeeCard(EmployeeCard instance)
     {
-      EmployeeInfo cache = Db.Employees.FirstOrDefault(p => p.UserId == instance.UserId);
+      EmployeeCard cache = Db.EmployeeCards.FirstOrDefault(p => p.UserId == instance.UserId);
 
       if (cache != null)
       {
@@ -40,13 +40,13 @@ namespace Customers.Db.Repository
       return false;
     }
 
-    public bool RemoveEmployee(int idEmployee)
+    public bool RemoveEmployeeCard(int idEmployeeCard)
     {
-      EmployeeInfo instance = Db.Employees.FirstOrDefault(p => p.UserId == idEmployee);
+      EmployeeCard instance = Db.EmployeeCards.FirstOrDefault(p => p.UserId == idEmployeeCard);
 
       if (instance != null)
       {
-        Db.Employees.Remove(instance);
+        Db.EmployeeCards.Remove(instance);
         Db.SaveChanges();
         return true;
       }

@@ -11,10 +11,7 @@ namespace Customers.Application
   {
     protected void Page_Load(object sender, EventArgs e)
     {
-      //      if (!IsPostBack)
-      //      {
       Page.Title = GlobalRes.Orders;
-      //      }
     }
 
     protected void OrdersGridView_OnRowCommand(object sender, GridViewCommandEventArgs e)
@@ -40,8 +37,8 @@ namespace Customers.Application
     {
       if (e.Row.RowType == DataControlRowType.DataRow)
       {
-        var rowItem = (CustomerInfo) e.Row.DataItem;
-        var customer = Repository.Customers.First(x => x.UserId == rowItem.UserId);
+        var rowItem = (CustomerCard) e.Row.DataItem;
+        var customer = Repository.CustomerCards.First(x => x.UserId == rowItem.UserId);
 
         if (customer.Orders.Count > 0)
         {

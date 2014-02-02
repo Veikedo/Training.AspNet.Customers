@@ -5,24 +5,24 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Customers.Db.Models
 {
-  [Table("EmployeeInfo")]
-  public class EmployeeInfo
+  public class CustomerCard
   {
-    public EmployeeInfo()
+    public CustomerCard()
     {
-      Slaves = new Collection<EmployeeInfo>();
+      Orders = new Collection<Order>();
     }
 
     [Key, ForeignKey("User")]
     public int UserId { get; set; }
 
     public virtual User User { get; set; }
-    
-    public int? ManagerId { get; set; }
 
-    [ForeignKey("ManagerId")]
-    public virtual EmployeeInfo Manager { get; set; }
-    public virtual ICollection<EmployeeInfo> Slaves { get; set; }
+    [Required]
+    public string CompanyName { get; set; }
+
+    [Required]
+    public virtual Address Address { get; set; }
+
     public virtual ICollection<Order> Orders { get; set; }
   }
 }

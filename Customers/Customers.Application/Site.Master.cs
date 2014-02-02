@@ -70,6 +70,19 @@ namespace Customers.Application
     protected void Page_Load(object sender, EventArgs e)
     {
       LanguageToggle.Text = CurrentCulture == "ru-RU" ? "English" : "Русский";
+
+      var user = HttpContext.Current.User;
+      if (user.Identity.IsAuthenticated)
+      {
+        if (user.IsInRole("Customer"))
+        {
+          CreateOrderLink.Visible = true;
+        }
+        else if (user.IsInRole("Employee"))
+        {
+          SelectManagerLink.Visible = true;
+        }
+      }
     }
 
     protected void LanguageToggle_Click(object sender, EventArgs e)

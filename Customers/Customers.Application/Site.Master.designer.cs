@@ -31,6 +31,24 @@ namespace Customers.Application {
         protected global::System.Web.UI.WebControls.LinkButton LanguageToggle;
         
         /// <summary>
+        /// CreateOrderLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CreateOrderLink;
+        
+        /// <summary>
+        /// SelectManagerLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl SelectManagerLink;
+        
+        /// <summary>
         /// FeaturedContent control.
         /// </summary>
         /// <remarks>

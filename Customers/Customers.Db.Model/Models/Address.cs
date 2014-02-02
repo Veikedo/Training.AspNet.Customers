@@ -7,7 +7,7 @@ namespace Customers.Db.Models
   {
     [Key, ForeignKey("Customer")]
     public int CustomerId { get; set; }
-    public virtual CustomerInfo Customer { get; set; }
+    public virtual CustomerCard Customer { get; set; }
     public string Street { get; set; }
     public string House { get; set; }
   }

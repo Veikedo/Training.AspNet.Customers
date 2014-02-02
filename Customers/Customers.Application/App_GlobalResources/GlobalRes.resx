@@ -273,4 +273,31 @@
   <data name="NoSuchPage" xml:space="preserve">
     <value>Нет такой страницы</value>
   </data>
+  <data name="UserAlreadyExists" xml:space="preserve">
+    <value>Пользователь с таким именем уже существует</value>
+  </data>
+  <data name="Employees" xml:space="preserve">
+    <value>Работники</value>
+  </data>
+  <data name="CreateOrder" xml:space="preserve">
+    <value>Сделать заказ</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="OrderDescriptionRequired" xml:space="preserve">
+    <value>Обязательно!</value>
+  </data>
+  <data name="OrderCreated" xml:space="preserve">
+    <value>Ваш заказ создан</value>
+  </data>
+  <data name="AccessNotAllowed" xml:space="preserve">
+    <value>Доступ запрещен</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="SelectManager" xml:space="preserve">
+    <value>Выбрать менеджера</value>
+  </data>
 </root>

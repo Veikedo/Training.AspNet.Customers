@@ -36,7 +36,7 @@
     </xs:attribute>
     <xs:attribute name="globalThreshold" type="NLogLevel">
       <xs:annotation>
-        <xs:documentation>Global log level threshold for application log messages. MessageLiterals below this level won't be logged..</xs:documentation>
+        <xs:documentation>Global log level threshold for application log messages. Messages below this level won't be logged..</xs:documentation>
       </xs:annotation>
     </xs:attribute>
     <xs:attribute name="throwExceptions" type="xs:boolean">
@@ -400,7 +400,7 @@
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="newLine" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="onOverflow" minOccurs="0" maxOccurs="1" type="NLog.Targets.NetworkTargetOverflowAction" />
-          <xs:element name="maxMessageLiteralSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
+          <xs:element name="maxMessageSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="encoding" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="layout" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="address" minOccurs="0" maxOccurs="1" type="Layout" />
@@ -428,10 +428,10 @@
         </xs:attribute>
         <xs:attribute name="onOverflow" type="NLog.Targets.NetworkTargetOverflowAction">
           <xs:annotation>
-            <xs:documentation>Action that should be taken if the message is larger than maxMessageLiteralSize.</xs:documentation>
+            <xs:documentation>Action that should be taken if the message is larger than maxMessageSize.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="maxMessageLiteralSize" type="xs:integer">
+        <xs:attribute name="maxMessageSize" type="xs:integer">
           <xs:annotation>
             <xs:documentation>Maximum message size in bytes.</xs:documentation>
           </xs:annotation>
@@ -1561,7 +1561,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="MessageLiteralBox">
+  <xs:complexType name="MessageBox">
     <xs:complexContent>
       <xs:extension base="Target">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -1581,7 +1581,7 @@
         </xs:attribute>
         <xs:attribute name="caption" type="SimpleLayoutAttribute">
           <xs:annotation>
-            <xs:documentation>MessageLiteral box title.</xs:documentation>
+            <xs:documentation>Message box title.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1683,7 +1683,7 @@
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="newLine" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="onOverflow" minOccurs="0" maxOccurs="1" type="NLog.Targets.NetworkTargetOverflowAction" />
-          <xs:element name="maxMessageLiteralSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
+          <xs:element name="maxMessageSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="layout" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="encoding" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="keepConnection" minOccurs="0" maxOccurs="1" type="xs:boolean" />
@@ -1703,10 +1703,10 @@
         </xs:attribute>
         <xs:attribute name="onOverflow" type="NLog.Targets.NetworkTargetOverflowAction">
           <xs:annotation>
-            <xs:documentation>Action that should be taken if the message is larger than maxMessageLiteralSize.</xs:documentation>
+            <xs:documentation>Action that should be taken if the message is larger than maxMessageSize.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="maxMessageLiteralSize" type="xs:integer">
+        <xs:attribute name="maxMessageSize" type="xs:integer">
           <xs:annotation>
             <xs:documentation>Maximum message size in bytes.</xs:documentation>
           </xs:annotation>
@@ -1751,7 +1751,7 @@
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="newLine" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="onOverflow" minOccurs="0" maxOccurs="1" type="NLog.Targets.NetworkTargetOverflowAction" />
-          <xs:element name="maxMessageLiteralSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
+          <xs:element name="maxMessageSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="encoding" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="layout" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="address" minOccurs="0" maxOccurs="1" type="Layout" />
@@ -1779,10 +1779,10 @@
         </xs:attribute>
         <xs:attribute name="onOverflow" type="NLog.Targets.NetworkTargetOverflowAction">
           <xs:annotation>
-            <xs:documentation>Action that should be taken if the message is larger than maxMessageLiteralSize.</xs:documentation>
+            <xs:documentation>Action that should be taken if the message is larger than maxMessageSize.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="maxMessageLiteralSize" type="xs:integer">
+        <xs:attribute name="maxMessageSize" type="xs:integer">
           <xs:annotation>
             <xs:documentation>Maximum message size in bytes.</xs:documentation>
           </xs:annotation>
@@ -1860,7 +1860,7 @@
       <xs:extension base="Target">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
-          <xs:element name="formatMessageLiteral" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="formatMessage" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="layout" minOccurs="0" maxOccurs="1" type="Layout" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
@@ -1868,7 +1868,7 @@
             <xs:documentation>Name of the target.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="formatMessageLiteral" type="xs:boolean">
+        <xs:attribute name="formatMessage" type="xs:boolean">
           <xs:annotation>
             <xs:documentation>Indicates whether to perform layout calculation.</xs:documentation>
           </xs:annotation>
