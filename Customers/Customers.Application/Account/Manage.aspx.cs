@@ -69,7 +69,7 @@ namespace Customers.Application.Account
       if (rowItem != null)
       {
         if (rowItem.UserId == _authenticatedEmployee.UserId)
-        {
+        { 
           e.Row.Visible = false;
         }
         else if(rowItem.UserId == _authenticatedEmployee.ManagerId)
