@@ -529,7 +529,7 @@ namespace Customers.Application.App_GlobalResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Выбрать менеджера.
+        ///   Looks up a localized string similar to Выберите менеджера.
         /// </summary>
         public static string SelectManager {
             get {

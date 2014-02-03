@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent" runat="server">
-  <asp:ObjectDataSource ID="EmployeesDataSource" runat="server" SelectMethod="GetEmployeeCards" TypeName="Customers.Application.DataSources.EmployeeCardsDataSource"></asp:ObjectDataSource>
+  <asp:ObjectDataSource ID="EmployeesDataSource" runat="server" SelectMethod="GetEmployeeCards" TypeName="Customers.Application.DataSources.EmployeeCardsDataSource" />
   <div style="float: left; width: 50%;">
     <asp:GridView ID="ManagersGridView" runat="server" AutoGenerateColumns="False" DataKeyNames="UserId"
                   SelectedRowStyle-BackColor="#E5E5E5" DataSourceID="EmployeesDataSource" 

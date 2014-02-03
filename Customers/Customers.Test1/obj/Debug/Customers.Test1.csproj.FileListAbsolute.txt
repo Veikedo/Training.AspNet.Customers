@@ -16,6 +16,7 @@ D:\Projects\Trainings\ASP.NET\Customers\Customers.Test1\bin\Debug\Ninject.xml
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Test1\obj\Debug\Customers.Test1.csprojResolveAssemblyReference.cache
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Test1\obj\Debug\Customers.Test1.exe
 D:\Projects\Trainings\ASP.NET\Customers\Customers.Test1\obj\Debug\Customers.Test1.pdb
+D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\EntityFramework.xml
 D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\Customers.Test1.exe.config
 D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\Customers.Test1.exe
 D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\Customers.Test1.pdb
@@ -26,7 +27,6 @@ D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\EntityFramework.Sq
 D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\System.Data.SqlServerCe.dll
 D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\Ninject.dll
 D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\Customers.Db.pdb
-D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\EntityFramework.xml
 D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\EntityFramework.SqlServerCompact.xml
 D:\Projects\Web\Customers\Customers\Customers.Test1\bin\Debug\Ninject.pdb

@@ -20,6 +20,5 @@ D:\Projects\Web\Customers\Customers\Customers.Db.Model\bin\Debug\EntityFramework
 D:\Projects\Web\Customers\Customers\Customers.Db.Model\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projects\Web\Customers\Customers\Customers.Db.Model\bin\Debug\Ninject.pdb
 D:\Projects\Web\Customers\Customers\Customers.Db.Model\bin\Debug\Ninject.xml
-D:\Projects\Web\Customers\Customers\Customers.Db.Model\obj\Debug\Customers.Db.csprojResolveAssemblyReference.cache
 D:\Projects\Web\Customers\Customers\Customers.Db.Model\obj\Debug\Customers.Db.dll
 D:\Projects\Web\Customers\Customers\Customers.Db.Model\obj\Debug\Customers.Db.pdb

@@ -78,10 +78,6 @@ namespace Customers.Application
         {
           CreateOrderLink.Visible = true;
         }
-        else if (user.IsInRole("Employee"))
-        {
-          SelectManagerLink.Visible = true;
-        }
       }
     }
 

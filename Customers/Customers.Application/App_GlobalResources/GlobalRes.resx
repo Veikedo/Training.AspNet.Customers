@@ -298,6 +298,6 @@
     <value>Сообщение</value>
   </data>
   <data name="SelectManager" xml:space="preserve">
-    <value>Выбрать менеджера</value>
+    <value>Выберите менеджера</value>
   </data>
 </root>
